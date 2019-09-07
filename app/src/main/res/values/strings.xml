@@ -3,4 +3,12 @@
     <string name="title_home">Home</string>
     <string name="title_dashboard">Dashboard</string>
     <string name="title_notifications">Notifications</string>
+
+    <string-array name="Maisuulist">
+        <item>1枚</item>
+        <item>2枚</item>
+        <item>3枚</item>
+        <item>4枚</item>
+        <item>5枚</item>
+    </string-array>
 </resources>
