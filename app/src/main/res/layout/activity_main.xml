@@ -164,12 +164,13 @@
         app:layout_constraintEnd_toEndOf="parent" />
 
     <Button
-        android:id="@+id/button7"
+        android:id="@+id/setting"
         android:layout_width="60dp"
         android:layout_height="60dp"
         android:layout_marginTop="32dp"
         android:layout_marginEnd="32dp"
         android:text="設定"
+        android:onClick="onButtonClick"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -247,6 +248,18 @@
         app:layout_constraintStart_toStartOf="@+id/linearLayout"
         app:layout_constraintTop_toTopOf="@+id/imageView3"
         app:srcCompat="@drawable/maru"
+        tools:visibility="visible" />
+
+    <Button
+        android:id="@+id/resetbutton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:onClick="onButtonClick"
+        android:text="リセット"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toStartOf="@+id/setting"
+        app:layout_constraintTop_toTopOf="parent"
         tools:visibility="visible" />
 
 </android.support.constraint.ConstraintLayout>
