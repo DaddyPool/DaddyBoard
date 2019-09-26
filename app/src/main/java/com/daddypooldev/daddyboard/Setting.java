@@ -8,8 +8,10 @@ import android.os.Handler;
 import androidx.appcompat.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Spinner;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
@@ -26,14 +28,23 @@ import java.io.BufferedReader;
 public class Setting extends AppCompatActivity {
 
     private String fileName = "Data.txt";
-    private String text ="123";
-    private EditText editText;
+    private String text ="";
+    private EditText editTextfuda1;
+    private EditText editTextfuda2;
+    private EditText editTextfuda3;
+    private EditText editTextfuda4;
+    private EditText editTextfuda5;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.setting);
-        editText = findViewById(R.id.editText);
+        editTextfuda1 = findViewById(R.id.editText_fuda1);
+        editTextfuda2 = findViewById(R.id.editText_fuda2);
+        editTextfuda3 = findViewById(R.id.editText_fuda3);
+        editTextfuda4 = findViewById(R.id.editText_fuda4);
+        editTextfuda5 = findViewById(R.id.editText_fuda5);
+
         final FloatingActionButton fab = findViewById(R.id.fab);
         if (fab != null) {
             fab.setOnClickListener(new View.OnClickListener() {
@@ -75,6 +86,48 @@ public class Setting extends AppCompatActivity {
                 }
             });
         }
+
+        //保存してあるテキストがあれば読み込んで表示する
+        fileName = "fuda1";
+        String str1 = readFile(fileName);
+        if (str1 != null) {
+            editTextfuda1.setText(str1);
+        } else {
+            editTextfuda1.setText("");
+        }
+        fileName = "fuda2";
+        String str2 = readFile(fileName);
+        if (str2 != null) {
+            editTextfuda2.setText(str2);
+        } else {
+            editTextfuda2.setText("");
+        }
+
+        fileName = "fuda3";
+        String str3 = readFile(fileName);
+        if (str3 != null) {
+            editTextfuda3.setText(str3);
+        } else {
+            editTextfuda3.setText("");
+        }
+
+        fileName = "fuda4";
+        String str4 = readFile(fileName);
+        if (str4 != null) {
+            editTextfuda4.setText(str4);
+        } else {
+            editTextfuda4.setText("");
+        }
+
+        fileName = "fuda5";
+        String str5 = readFile(fileName);
+        if (str5 != null) {
+            editTextfuda5.setText(str5);
+        } else {
+            editTextfuda5.setText("");
+        }
+
+
         //保存ボタンの処理
         final Button buttonSave = findViewById(R.id.buttonSave);
         buttonSave.setOnClickListener(new View.OnClickListener() {
@@ -86,7 +139,20 @@ public class Setting extends AppCompatActivity {
                         buttonSave.setEnabled(true);
                     }
                 }, 1000L);
-                text = editText.getText().toString();
+                fileName = "fuda1";
+                text = editTextfuda1.getText().toString();
+                saveFile(fileName, text);
+                fileName = "fuda2";
+                text = editTextfuda2.getText().toString();
+                saveFile(fileName, text);
+                fileName = "fuda3";
+                text = editTextfuda3.getText().toString();
+                saveFile(fileName, text);
+                fileName = "fuda4";
+                text = editTextfuda4.getText().toString();
+                saveFile(fileName, text);
+                fileName = "fuda5";
+                text = editTextfuda5.getText().toString();
                 saveFile(fileName, text);
 
             }
@@ -129,6 +195,11 @@ public class Setting extends AppCompatActivity {
 
         return text;
     }
+
+    // 札枚数選択
+    //final Spinner sp=(Spinner)findViewById(R.id.spinner);
+
+
 
 
 }
