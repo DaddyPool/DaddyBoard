@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -16,10 +17,17 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
+import java.io.BufferedReader;
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.io.InputStreamReader;
+
 
 public class MainActivity extends AppCompatActivity {
 
     private TextView mTextMessage;
+
+    private String fileName = "Data.txt";
 
     //ボタンの状態変数の宣言
     boolean onbutton1=false;
@@ -67,7 +75,52 @@ public class MainActivity extends AppCompatActivity {
 //
 //            }
 //        });
+        //保存してあるテキストがあれば読み込んで表示する
+        fileName = "fuda1";
+        String str1 = readFile(fileName);
+        if (str1 != null) {
+            Button button = findViewById(R.id.button);
+            button.setText(str1);
+        } else {
+            //editTextfuda1.setText("");
+        }
+        fileName = "fuda2";
+        String str2 = readFile(fileName);
+        if (str2 != null) {
+            Button button2 = findViewById(R.id.button2);
+            button2.setText(str2);
+        } else {
+            //editTextfuda2.setText("");
+        }
+
+        fileName = "fuda3";
+        String str3 = readFile(fileName);
+        if (str3 != null) {
+            Button button3 = findViewById(R.id.button3);
+            button3.setText(str3);
+        } else {
+            //editTextfuda3.setText("");
+        }
+
+        fileName = "fuda4";
+        String str4 = readFile(fileName);
+        if (str4 != null) {
+            Button button4 = findViewById(R.id.button4);
+            button4.setText(str4);
+        } else {
+            //editTextfuda4.setText("");
+        }
+
+        fileName = "fuda5";
+        String str5 = readFile(fileName);
+        if (str5 != null) {
+            Button button5 = findViewById(R.id.button5);
+            button5.setText(str5);
+        } else {
+            //editTextfuda5.setText("");
+        }
     }
+
     // クリック時に呼ばれるメソッド
     public void onButtonClick(View view){
         switch (view.getId()) {
@@ -142,5 +195,26 @@ public class MainActivity extends AppCompatActivity {
                 Intent intent = new Intent(this, Setting.class);
                 startActivity(intent);
         }
+    }
+    // ファイルを読み出し
+    public String readFile(String file) {
+        String text = null;
+
+        // try-with-resources
+        try (FileInputStream fileInputStream = openFileInput(file);
+             BufferedReader reader = new BufferedReader(
+                     new InputStreamReader(fileInputStream, "UTF-8"));
+        ) {
+
+            String lineBuffer;
+            while ((lineBuffer = reader.readLine()) != null) {
+                text = lineBuffer;
+            }
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+        return text;
     }
 }
