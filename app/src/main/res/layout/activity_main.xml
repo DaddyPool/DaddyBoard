@@ -240,14 +240,14 @@
         tools:visibility="visible" />
 
     <ImageView
-        android:id="@+id/daimaru1"
+        android:id="@+id/Hanamaru1"
         android:layout_width="530dp"
         android:layout_height="265dp"
         android:translationZ="2dp"
         android:visibility="invisible"
         app:layout_constraintStart_toStartOf="@+id/linearLayout"
         app:layout_constraintTop_toTopOf="@+id/imageView3"
-        app:srcCompat="@drawable/maru"
+        app:srcCompat="@drawable/hanamaru01"
         tools:visibility="visible" />
 
     <Button

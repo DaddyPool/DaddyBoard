@@ -157,8 +157,15 @@ public class Setting extends AppCompatActivity {
 
             }
         });
-
+        Button buttonBack = findViewById(R.id.buttonBack);
+        buttonBack.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                    finish();
+            }
+        });
     }
+
     // ファイルを保存
     public void saveFile(String file, String str) {
 

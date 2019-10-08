@@ -171,7 +171,7 @@ public class MainActivity extends AppCompatActivity {
                 break;
             case R.id.button6:
                 if ((onbutton1==true)&&(onbutton2==true)&&(onbutton3==true)&&(onbutton4==true)&&(onbutton5==true)) {
-                    findViewById(R.id.daimaru1).setVisibility(View.VISIBLE);
+                    findViewById(R.id.Hanamaru1).setVisibility(View.VISIBLE);
                     findViewById(R.id.resetbutton).setVisibility(View.VISIBLE);
 
                 }
@@ -182,7 +182,7 @@ public class MainActivity extends AppCompatActivity {
                 findViewById(R.id.maru3).setVisibility(View.INVISIBLE);
                 findViewById(R.id.maru4).setVisibility(View.INVISIBLE);
                 findViewById(R.id.maru5).setVisibility(View.INVISIBLE);
-                findViewById(R.id.daimaru1).setVisibility(View.INVISIBLE);
+                findViewById(R.id.Hanamaru1).setVisibility(View.INVISIBLE);
                 findViewById(R.id.resetbutton).setVisibility(View.INVISIBLE);
                 onbutton1 = false;
                 onbutton2 = false;
