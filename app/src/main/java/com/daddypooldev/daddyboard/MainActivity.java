@@ -36,6 +36,7 @@ public class MainActivity extends AppCompatActivity {
     boolean onbutton4=false;
     boolean onbutton5=false;
 
+//    String kaigyou;
 
     private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener
             = new BottomNavigationView.OnNavigationItemSelectedListener() {
@@ -75,12 +76,23 @@ public class MainActivity extends AppCompatActivity {
 //
 //            }
 //        });
+    }
+
+    @Override
+    public void onResume() {
+
         //保存してあるテキストがあれば読み込んで表示する
+        super.onResume();
         fileName = "fuda1";
         String str1 = readFile(fileName);
+//        kaigyou = str1;
         if (str1 != null) {
+//            for(int count = 1 ; count < str1.length() ; count++) {
+//                kaigyou.insert(13,"\\n");
+//            }
             Button button = findViewById(R.id.button);
             button.setText(str1);
+
         } else {
             //editTextfuda1.setText("");
         }
@@ -120,7 +132,6 @@ public class MainActivity extends AppCompatActivity {
             //editTextfuda5.setText("");
         }
     }
-
     // クリック時に呼ばれるメソッド
     public void onButtonClick(View view){
         switch (view.getId()) {
