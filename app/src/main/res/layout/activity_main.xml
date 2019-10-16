@@ -20,66 +20,6 @@
         app:layout_constraintTop_toTopOf="parent" />
 
 
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="56dp"
-        android:layout_height="67dp"
-        android:layout_marginStart="60dp"
-        android:layout_marginTop="80dp"
-        android:layout_weight="1"
-        android:translationZ="2dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/pinb13" />
-
-    <ImageView
-        android:id="@+id/imageView2"
-        android:layout_width="56dp"
-        android:layout_height="67dp"
-        android:layout_marginStart="60dp"
-        android:layout_marginTop="80dp"
-        android:layout_weight="1"
-        android:translationZ="2dp"
-        app:layout_constraintStart_toEndOf="@+id/imageView"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/pinb13" />
-
-    <ImageView
-        android:id="@+id/imageView3"
-        android:layout_width="56dp"
-        android:layout_height="67dp"
-        android:layout_marginStart="52dp"
-        android:layout_marginTop="80dp"
-        android:layout_weight="1"
-        android:translationZ="2dp"
-        app:layout_constraintStart_toEndOf="@+id/imageView2"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/pinb13" />
-
-    <ImageView
-        android:id="@+id/imageView4"
-        android:layout_width="56dp"
-        android:layout_height="67dp"
-        android:layout_marginStart="52dp"
-        android:layout_marginTop="80dp"
-        android:layout_weight="1"
-        android:translationZ="2dp"
-        app:layout_constraintStart_toEndOf="@+id/imageView3"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/pinb13" />
-
-    <ImageView
-        android:id="@+id/imageView5"
-        android:layout_width="56dp"
-        android:layout_height="67dp"
-        android:layout_marginStart="40dp"
-        android:layout_marginTop="80dp"
-        android:layout_weight="1"
-        android:translationZ="2dp"
-        app:layout_constraintStart_toEndOf="@+id/imageView4"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/pinb13" />
-
     <Button
         android:id="@+id/button"
         android:layout_width="76dp"
@@ -151,6 +91,66 @@
         app:layout_constraintStart_toEndOf="@+id/button4"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.441" />
+
+    <ImageView
+        android:id="@+id/imageView5"
+        android:layout_width="56dp"
+        android:layout_height="67dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="80dp"
+        android:layout_weight="1"
+        android:translationZ="2dp"
+        app:layout_constraintStart_toEndOf="@+id/imageView4"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/pinb13" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="56dp"
+        android:layout_height="67dp"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="80dp"
+        android:layout_weight="1"
+        android:translationZ="2dp"
+        app:layout_constraintStart_toEndOf="@+id/imageView"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/pinb13" />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="56dp"
+        android:layout_height="67dp"
+        android:layout_marginStart="52dp"
+        android:layout_marginTop="80dp"
+        android:layout_weight="1"
+        android:translationZ="2dp"
+        app:layout_constraintStart_toEndOf="@+id/imageView2"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/pinb13" />
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="56dp"
+        android:layout_height="67dp"
+        android:layout_marginStart="52dp"
+        android:layout_marginTop="80dp"
+        android:layout_weight="1"
+        android:translationZ="2dp"
+        app:layout_constraintStart_toEndOf="@+id/imageView3"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/pinb13" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="56dp"
+        android:layout_height="67dp"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="80dp"
+        android:layout_weight="1"
+        android:translationZ="2dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/pinb13" />
 
     <Button
         android:id="@+id/button6"
