@@ -85,6 +85,8 @@ public class MainActivity extends AppCompatActivity {
         super.onResume();
         fileName = "fuda1";
         String str1 = readFile(fileName);
+//        fileName = "iro1";
+//        String iro1 = readFile(fileName);
 //        kaigyou = str1;
         if (str1 != null) {
 //            for(int count = 1 ; count < str1.length() ; count++) {
@@ -92,6 +94,7 @@ public class MainActivity extends AppCompatActivity {
 //            }
             Button button = findViewById(R.id.button);
             button.setText(str1);
+//            button.setBackgroundColor(Integer.parseInt(iro1));
 
         } else {
             //editTextfuda1.setText("");
@@ -131,6 +134,88 @@ public class MainActivity extends AppCompatActivity {
         } else {
             //editTextfuda5.setText("");
         }
+        fileName = "iro1";
+        String iro1 = readFile(fileName);
+        if (iro1 != null) {
+            Button button = findViewById(R.id.button);
+            button.setBackgroundColor(Integer.parseInt(iro1));
+        } else {
+        }
+//        fileName = "iro2";
+//        String iro2 = readFile(fileName);
+//        if (iro2 != null) {
+//            Button button2 = findViewById(R.id.button);
+//            button.setBackgroundColor(Integer.parseInt(iro2));
+//        } else {
+//        }
+//        fileName = "iro3";
+//        String iro3 = readFile(fileName);
+//        if (iro3 != null) {
+//            Button button3 = findViewById(R.id.button);
+//            button.setBackgroundColor(Integer.parseInt(iro3));
+//        } else {
+//        }
+//        fileName = "iro4";
+//        String iro4 = readFile(fileName);
+//        if (iro4 != null) {
+//            Button button4 = findViewById(R.id.button);
+//            button.setBackgroundColor(Integer.parseInt(iro4));
+//        } else {
+//        }
+//        fileName = "iro5";
+//        String iro5 = readFile(fileName);
+//        if (iro5 != null) {
+//            Button button5 = findViewById(R.id.button);
+//            button.setBackgroundColor(Integer.parseInt(iro5));
+//        } else {
+//        }
+
+        //札の枚数の処理
+//        fileName = "maisuu";
+//        int maisuu = 1;
+//        switch(maisuu){
+//            case 1:
+//                findViewById(R.id.button2).setVisibility(View.GONE);
+//                findViewById(R.id.button3).setVisibility(View.GONE);
+//                findViewById(R.id.button4).setVisibility(View.GONE);
+//                findViewById(R.id.button5).setVisibility(View.GONE);
+//                onbutton1 = false;
+//                onbutton2 = true;
+//                onbutton3 = true;
+//                onbutton4 = true;
+//                onbutton5 = true;
+//            case 2:
+//                findViewById(R.id.button3).setVisibility(View.GONE);
+//                findViewById(R.id.button4).setVisibility(View.GONE);
+//                findViewById(R.id.button5).setVisibility(View.GONE);
+//                onbutton1 = false;
+//                onbutton2 = false;
+//                onbutton3 = true;
+//                onbutton4 = true;
+//                onbutton5 = true;
+//            case 3:
+//                findViewById(R.id.button4).setVisibility(View.GONE);
+//                findViewById(R.id.button5).setVisibility(View.GONE);
+//                onbutton1 = false;
+//                onbutton2 = false;
+//                onbutton3 = false;
+//                onbutton4 = true;
+//                onbutton5 = true;
+//            case 4:
+//                findViewById(R.id.button5).setVisibility(View.GONE);
+//                onbutton1 = false;
+//                onbutton2 = false;
+//                onbutton3 = false;
+//                onbutton4 = false;
+//                onbutton5 = true;
+//            case 5:
+//                onbutton1 = false;
+//                onbutton2 = false;
+//                onbutton3 = false;
+//                onbutton4 = false;
+//                onbutton5 = false;
+//            default:
+//        }
     }
     // クリック時に呼ばれるメソッド
     public void onButtonClick(View view){
