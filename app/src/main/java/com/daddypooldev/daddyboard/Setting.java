@@ -9,8 +9,10 @@ import android.os.Handler;
 import androidx.appcompat.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Spinner;
 import android.widget.TextView;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
@@ -56,6 +58,13 @@ public class Setting extends AppCompatActivity {
         iro3 = findViewById(R.id.iro3);
         iro4 = findViewById(R.id.iro4);
         iro5 = findViewById(R.id.iro5);
+
+        //色初期値　仮置き
+        iro1.setBackgroundColor(Color.RED);
+        iro2.setBackgroundColor(Color.YELLOW);
+        iro3.setBackgroundColor(Color.GREEN);
+        iro4.setBackgroundColor(Color.BLUE);
+        iro5.setBackgroundColor(Color.MAGENTA);
 
         final FloatingActionButton fab = findViewById(R.id.fab);
             if (fab != null) {
@@ -144,6 +153,183 @@ public class Setting extends AppCompatActivity {
             });
 
         }
+        final FloatingActionButton fab3 = findViewById(R.id.fab3);
+        if (fab3 != null) {
+            fab3.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    final ColorPicker colorPicker = new ColorPicker(Setting.this);
+                    ArrayList<String> colors = new ArrayList<>();
+                    colors.add("#82B926");
+                    colors.add("#a276eb");
+                    colors.add("#6a3ab2");
+                    colors.add("#666666");
+                    colors.add("#FFFF00");
+                    colors.add("#3C8D2F");
+                    colors.add("#FA9F00");
+                    colors.add("#FF0000");
+
+                    colorPicker
+                            .setDefaultColorButton(Color.parseColor("#f84c44"))
+                            .setColors(colors)
+                            .setColumns(5)
+                            .setRoundColorButton(true)
+                            .setOnChooseColorListener(new ColorPicker.OnChooseColorListener() {
+                                @Override
+                                public void onChooseColor(int position, int color) {
+                                    Log.d("position", "" + position);// will be fired only when OK button was tapped
+                                    iro3.setBackgroundColor(color);
+                                }
+
+                                @Override
+                                public void onCancel() {
+
+                                }
+                            })
+                            .addListenerButton("newButton", new ColorPicker.OnButtonListener() {
+                                @Override
+                                public void onClick(View v, int position, int color) {
+                                    Log.d("position", "" + position);
+                                }
+                            }).show();
+                }
+            });
+
+        }
+        final FloatingActionButton fab4 = findViewById(R.id.fab4);
+        if (fab4 != null) {
+            fab4.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    final ColorPicker colorPicker = new ColorPicker(Setting.this);
+                    ArrayList<String> colors = new ArrayList<>();
+                    colors.add("#82B926");
+                    colors.add("#a276eb");
+                    colors.add("#6a3ab2");
+                    colors.add("#666666");
+                    colors.add("#FFFF00");
+                    colors.add("#3C8D2F");
+                    colors.add("#FA9F00");
+                    colors.add("#FF0000");
+
+                    colorPicker
+                            .setDefaultColorButton(Color.parseColor("#f84c44"))
+                            .setColors(colors)
+                            .setColumns(5)
+                            .setRoundColorButton(true)
+                            .setOnChooseColorListener(new ColorPicker.OnChooseColorListener() {
+                                @Override
+                                public void onChooseColor(int position, int color) {
+                                    Log.d("position", "" + position);// will be fired only when OK button was tapped
+                                    iro4.setBackgroundColor(color);
+                                }
+
+                                @Override
+                                public void onCancel() {
+
+                                }
+                            })
+                            .addListenerButton("newButton", new ColorPicker.OnButtonListener() {
+                                @Override
+                                public void onClick(View v, int position, int color) {
+                                    Log.d("position", "" + position);
+                                }
+                            }).show();
+                }
+            });
+
+        }
+        final FloatingActionButton fab5 = findViewById(R.id.fab5);
+        if (fab5 != null) {
+            fab5.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    final ColorPicker colorPicker = new ColorPicker(Setting.this);
+                    ArrayList<String> colors = new ArrayList<>();
+                    colors.add("#82B926");
+                    colors.add("#a276eb");
+                    colors.add("#6a3ab2");
+                    colors.add("#666666");
+                    colors.add("#FFFF00");
+                    colors.add("#3C8D2F");
+                    colors.add("#FA9F00");
+                    colors.add("#FF0000");
+
+                    colorPicker
+                            .setDefaultColorButton(Color.parseColor("#f84c44"))
+                            .setColors(colors)
+                            .setColumns(5)
+                            .setRoundColorButton(true)
+                            .setOnChooseColorListener(new ColorPicker.OnChooseColorListener() {
+                                @Override
+                                public void onChooseColor(int position, int color) {
+                                    Log.d("position", "" + position);// will be fired only when OK button was tapped
+                                    iro5.setBackgroundColor(color);
+                                }
+
+                                @Override
+                                public void onCancel() {
+
+                                }
+                            })
+                            .addListenerButton("newButton", new ColorPicker.OnButtonListener() {
+                                @Override
+                                public void onClick(View v, int position, int color) {
+                                    Log.d("position", "" + position);
+                                }
+                            }).show();
+                }
+            });
+
+        }
+        final Spinner sp=(Spinner)findViewById(R.id.spinner);
+        //スピナーの内容選択時に呼び出されるコールバックリスナーを登録
+        sp.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view,
+                                       int position, long id) {
+                Spinner spinner = (Spinner) parent;
+                // 選択されたアイテムを取得します
+                String item = (String) spinner.getSelectedItem();
+                if (item.equals("1枚")){
+                    editTextfuda2.setVisibility(view.GONE);
+                    editTextfuda3.setVisibility(view.GONE);
+                    editTextfuda4.setVisibility(view.GONE);
+                    editTextfuda5.setVisibility(view.GONE);
+                }
+                else if (item.equals("2枚")){
+                    editTextfuda2.setVisibility(view.VISIBLE);
+                    editTextfuda3.setVisibility(view.GONE);
+                    editTextfuda4.setVisibility(view.GONE);
+                    editTextfuda5.setVisibility(view.GONE);
+                }
+                else if (item.equals("3枚")){
+                    editTextfuda2.setVisibility(view.VISIBLE);
+                    editTextfuda3.setVisibility(view.VISIBLE);
+                    editTextfuda4.setVisibility(view.GONE);
+                    editTextfuda5.setVisibility(view.GONE);
+                }
+                else if (item.equals("4枚")){
+                    editTextfuda2.setVisibility(view.VISIBLE);
+                    editTextfuda3.setVisibility(view.VISIBLE);
+                    editTextfuda4.setVisibility(view.VISIBLE);
+                    editTextfuda5.setVisibility(view.GONE);
+                }
+                else if (item.equals("5枚")){
+                    editTextfuda2.setVisibility(view.VISIBLE);
+                    editTextfuda3.setVisibility(view.VISIBLE);
+                    editTextfuda4.setVisibility(view.VISIBLE);
+                    editTextfuda5.setVisibility(view.VISIBLE);
+                }
+
+
+            }
+            @Override
+            public void onNothingSelected(AdapterView<?> arg0) {
+            }
+
+        });
+
         //保存してあるテキストがあれば読み込んで表示する
         fileName = "fuda1";
         String str1 = readFile(fileName);
@@ -195,31 +381,40 @@ public class Setting extends AppCompatActivity {
         fileName = "iro2";
         String str7 = readFile(fileName);
         if (str7 != null) {
-            iro1.setBackgroundColor(Integer.parseInt(str7));
+            iro2.setBackgroundColor(Integer.parseInt(str7));
         } else {
             ;
         }
         fileName = "iro3";
         String str8 = readFile(fileName);
         if (str8 != null) {
-            iro1.setBackgroundColor(Integer.parseInt(str8));
+            iro3.setBackgroundColor(Integer.parseInt(str8));
         } else {
             ;
         }
         fileName = "iro4";
         String str9 = readFile(fileName);
         if (str9 != null) {
-            iro1.setBackgroundColor(Integer.parseInt(str9));
+            iro4.setBackgroundColor(Integer.parseInt(str9));
         } else {
             ;
         }
         fileName = "iro5";
         String str10 = readFile(fileName);
         if (str10 != null) {
-            iro1.setBackgroundColor(Integer.parseInt(str10));
+            iro5.setBackgroundColor(Integer.parseInt(str10));
         } else {
             ;
         }
+        //プルダウンの読み込み
+        fileName = "maisu";
+        String str11 = readFile(fileName);
+        if (str11 != null) {
+            sp.setSelection(Integer.parseInt(str11));
+        } else {
+            sp.setId(0);
+        }
+
 
 
 
@@ -251,7 +446,6 @@ public class Setting extends AppCompatActivity {
                 saveFile(fileName, text);
 
                 //>>色の保存
-                //Null判定が必要。
                 fileName = "iro1";
                 ColorDrawable color_drawable1 = (ColorDrawable)iro1.getBackground();
                 text = String.valueOf(color_drawable1.getColor());
@@ -273,6 +467,10 @@ public class Setting extends AppCompatActivity {
                 text = String.valueOf(color_drawable5.getColor());
                 saveFile(fileName, text);
 
+                //プルダウンの保存
+                fileName = "maisu";
+                text = String.valueOf(sp.getSelectedItemId());
+                saveFile(fileName, text);
             }
         });
         Button buttonBack = findViewById(R.id.buttonBack);
