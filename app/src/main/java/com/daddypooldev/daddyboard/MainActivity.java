@@ -171,51 +171,70 @@ public class MainActivity extends AppCompatActivity {
 //        }
 
         //札の枚数の処理
-//        fileName = "maisuu";
-//        int maisuu = 1;
-//        switch(maisuu){
-//            case 1:
-//                findViewById(R.id.button2).setVisibility(View.GONE);
-//                findViewById(R.id.button3).setVisibility(View.GONE);
-//                findViewById(R.id.button4).setVisibility(View.GONE);
-//                findViewById(R.id.button5).setVisibility(View.GONE);
-//                onbutton1 = false;
-//                onbutton2 = true;
-//                onbutton3 = true;
-//                onbutton4 = true;
-//                onbutton5 = true;
-//            case 2:
-//                findViewById(R.id.button3).setVisibility(View.GONE);
-//                findViewById(R.id.button4).setVisibility(View.GONE);
-//                findViewById(R.id.button5).setVisibility(View.GONE);
-//                onbutton1 = false;
-//                onbutton2 = false;
-//                onbutton3 = true;
-//                onbutton4 = true;
-//                onbutton5 = true;
-//            case 3:
-//                findViewById(R.id.button4).setVisibility(View.GONE);
-//                findViewById(R.id.button5).setVisibility(View.GONE);
-//                onbutton1 = false;
-//                onbutton2 = false;
-//                onbutton3 = false;
-//                onbutton4 = true;
-//                onbutton5 = true;
-//            case 4:
-//                findViewById(R.id.button5).setVisibility(View.GONE);
-//                onbutton1 = false;
-//                onbutton2 = false;
-//                onbutton3 = false;
-//                onbutton4 = false;
-//                onbutton5 = true;
-//            case 5:
-//                onbutton1 = false;
-//                onbutton2 = false;
-//                onbutton3 = false;
-//                onbutton4 = false;
-//                onbutton5 = false;
-//            default:
-//        }
+        fileName = "maisu";
+        String maisuu = readFile(fileName);
+        if (maisuu != null) {
+            switch (maisuu) {
+                case "0":
+                    findViewById(R.id.button).setVisibility(View.VISIBLE);
+                    findViewById(R.id.button2).setVisibility(View.GONE);
+                    findViewById(R.id.button3).setVisibility(View.GONE);
+                    findViewById(R.id.button4).setVisibility(View.GONE);
+                    findViewById(R.id.button5).setVisibility(View.GONE);
+                    onbutton1 = false;
+                    onbutton2 = true;
+                    onbutton3 = true;
+                    onbutton4 = true;
+                    onbutton5 = true;
+                case "1":
+                    findViewById(R.id.button).setVisibility(View.VISIBLE);
+                    findViewById(R.id.button2).setVisibility(View.VISIBLE);
+                    findViewById(R.id.button3).setVisibility(View.GONE);
+                    findViewById(R.id.button4).setVisibility(View.GONE);
+                    findViewById(R.id.button5).setVisibility(View.GONE);
+                    onbutton1 = false;
+                    onbutton2 = false;
+                    onbutton3 = true;
+                    onbutton4 = true;
+                    onbutton5 = true;
+                case "2":
+                    findViewById(R.id.button).setVisibility(View.VISIBLE);
+                    findViewById(R.id.button2).setVisibility(View.VISIBLE);
+                    findViewById(R.id.button3).setVisibility(View.VISIBLE);
+                    findViewById(R.id.button4).setVisibility(View.GONE);
+                    findViewById(R.id.button5).setVisibility(View.GONE);
+                    onbutton1 = false;
+                    onbutton2 = false;
+                    onbutton3 = false;
+                    onbutton4 = true;
+                    onbutton5 = true;
+                case "3":
+                    findViewById(R.id.button).setVisibility(View.VISIBLE);
+                    findViewById(R.id.button2).setVisibility(View.VISIBLE);
+                    findViewById(R.id.button3).setVisibility(View.VISIBLE);
+                    findViewById(R.id.button4).setVisibility(View.VISIBLE);
+                    findViewById(R.id.button5).setVisibility(View.GONE);
+                    onbutton1 = false;
+                    onbutton2 = false;
+                    onbutton3 = false;
+                    onbutton4 = false;
+                    onbutton5 = true;
+                case "4":
+                    findViewById(R.id.button).setVisibility(View.VISIBLE);
+                    findViewById(R.id.button2).setVisibility(View.VISIBLE);
+                    findViewById(R.id.button3).setVisibility(View.VISIBLE);
+                    findViewById(R.id.button4).setVisibility(View.VISIBLE);
+                    findViewById(R.id.button5).setVisibility(View.VISIBLE);
+                    onbutton1 = false;
+                    onbutton2 = false;
+                    onbutton3 = false;
+                    onbutton4 = false;
+                    onbutton5 = false;
+                default:
+            }
+        }else{
+
+            }
     }
     // クリック時に呼ばれるメソッド
     public void onButtonClick(View view){
