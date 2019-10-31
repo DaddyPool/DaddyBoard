@@ -1,6 +1,7 @@
 package com.daddypooldev.daddyboard;
 
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 //import android.support.annotation.NonNull;
 //import android.support.design.widget.BottomNavigationView;
@@ -141,34 +142,34 @@ public class MainActivity extends AppCompatActivity {
             button.setBackgroundColor(Integer.parseInt(iro1));
         } else {
         }
-//        fileName = "iro2";
-//        String iro2 = readFile(fileName);
-//        if (iro2 != null) {
-//            Button button2 = findViewById(R.id.button);
-//            button.setBackgroundColor(Integer.parseInt(iro2));
-//        } else {
-//        }
-//        fileName = "iro3";
-//        String iro3 = readFile(fileName);
-//        if (iro3 != null) {
-//            Button button3 = findViewById(R.id.button);
-//            button.setBackgroundColor(Integer.parseInt(iro3));
-//        } else {
-//        }
-//        fileName = "iro4";
-//        String iro4 = readFile(fileName);
-//        if (iro4 != null) {
-//            Button button4 = findViewById(R.id.button);
-//            button.setBackgroundColor(Integer.parseInt(iro4));
-//        } else {
-//        }
-//        fileName = "iro5";
-//        String iro5 = readFile(fileName);
-//        if (iro5 != null) {
-//            Button button5 = findViewById(R.id.button);
-//            button.setBackgroundColor(Integer.parseInt(iro5));
-//        } else {
-//        }
+        fileName = "iro2";
+        String iro2 = readFile(fileName);
+        if (iro2 != null) {
+            Button button2 = findViewById(R.id.button2);
+            button2.setBackgroundColor(Integer.parseInt(iro2));
+        } else {
+        }
+        fileName = "iro3";
+        String iro3 = readFile(fileName);
+        if (iro3 != null) {
+            Button button3 = findViewById(R.id.button3);
+            button3.setBackgroundColor(Integer.parseInt(iro3));
+        } else {
+        }
+        fileName = "iro4";
+        String iro4 = readFile(fileName);
+        if (iro4 != null) {
+            Button button4 = findViewById(R.id.button4);
+            button4.setBackgroundColor(Integer.parseInt(iro4));
+        } else {
+        }
+        fileName = "iro5";
+        String iro5 = readFile(fileName);
+        if (iro5 != null) {
+            Button button5 = findViewById(R.id.button5);
+            button5.setBackgroundColor(Integer.parseInt(iro5));
+        } else {
+        }
 
         //札の枚数の処理
         fileName = "maisu";
@@ -186,6 +187,7 @@ public class MainActivity extends AppCompatActivity {
                     onbutton3 = true;
                     onbutton4 = true;
                     onbutton5 = true;
+                    break;
                 case "1":
                     findViewById(R.id.button).setVisibility(View.VISIBLE);
                     findViewById(R.id.button2).setVisibility(View.VISIBLE);
@@ -197,6 +199,7 @@ public class MainActivity extends AppCompatActivity {
                     onbutton3 = true;
                     onbutton4 = true;
                     onbutton5 = true;
+                    break;
                 case "2":
                     findViewById(R.id.button).setVisibility(View.VISIBLE);
                     findViewById(R.id.button2).setVisibility(View.VISIBLE);
@@ -208,6 +211,7 @@ public class MainActivity extends AppCompatActivity {
                     onbutton3 = false;
                     onbutton4 = true;
                     onbutton5 = true;
+                    break;
                 case "3":
                     findViewById(R.id.button).setVisibility(View.VISIBLE);
                     findViewById(R.id.button2).setVisibility(View.VISIBLE);
@@ -219,6 +223,7 @@ public class MainActivity extends AppCompatActivity {
                     onbutton3 = false;
                     onbutton4 = false;
                     onbutton5 = true;
+                    break;
                 case "4":
                     findViewById(R.id.button).setVisibility(View.VISIBLE);
                     findViewById(R.id.button2).setVisibility(View.VISIBLE);
@@ -230,6 +235,7 @@ public class MainActivity extends AppCompatActivity {
                     onbutton3 = false;
                     onbutton4 = false;
                     onbutton5 = false;
+                    break;
                 default:
             }
         }else{
