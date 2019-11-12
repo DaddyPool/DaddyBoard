@@ -306,10 +306,10 @@ public class Setting extends AppCompatActivity {
                     editTextfuda3.setVisibility(view.GONE);
                     editTextfuda4.setVisibility(view.GONE);
                     editTextfuda5.setVisibility(view.GONE);
-                    textView2.setVisibility(view.GONE);
-                    textView3.setVisibility(view.GONE);
-                    textView4.setVisibility(view.GONE);
-                    textView5.setVisibility(view.GONE);
+                    textView2.setVisibility(view.INVISIBLE);
+                    textView3.setVisibility(view.INVISIBLE);
+                    textView4.setVisibility(view.INVISIBLE);
+                    textView5.setVisibility(view.INVISIBLE);
                     fab2.hide();
                     fab3.hide();
                     fab4.hide();
@@ -322,9 +322,9 @@ public class Setting extends AppCompatActivity {
                     editTextfuda4.setVisibility(view.GONE);
                     editTextfuda5.setVisibility(view.GONE);
                     textView2.setVisibility(view.VISIBLE);
-                    textView3.setVisibility(view.GONE);
-                    textView4.setVisibility(view.GONE);
-                    textView5.setVisibility(view.GONE);
+                    textView3.setVisibility(view.INVISIBLE);
+                    textView4.setVisibility(view.INVISIBLE);
+                    textView5.setVisibility(view.INVISIBLE);
                     fab2.show();
                     fab3.hide();
                     fab4.hide();
@@ -337,8 +337,8 @@ public class Setting extends AppCompatActivity {
                     editTextfuda5.setVisibility(view.GONE);
                     textView2.setVisibility(view.VISIBLE);
                     textView3.setVisibility(view.VISIBLE);
-                    textView4.setVisibility(view.GONE);
-                    textView5.setVisibility(view.GONE);
+                    textView4.setVisibility(view.INVISIBLE);
+                    textView5.setVisibility(view.INVISIBLE);
                     fab2.show();
                     fab3.show();
                     fab4.hide();
@@ -352,7 +352,7 @@ public class Setting extends AppCompatActivity {
                     textView2.setVisibility(view.VISIBLE);
                     textView3.setVisibility(view.VISIBLE);
                     textView4.setVisibility(view.VISIBLE);
-                    textView5.setVisibility(view.GONE);
+                    textView5.setVisibility(view.INVISIBLE);
                     fab2.show();
                     fab3.show();
                     fab4.show();
