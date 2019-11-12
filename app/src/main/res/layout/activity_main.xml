@@ -9,271 +9,276 @@
     tools:context=".MainActivity">
 
 
-    <LinearLayout
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/Hanamaru1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:translationZ="2dp"
+            android:visibility="invisible"
+            app:srcCompat="@drawable/hanamaru01"
+            tools:visibility="visible" />
 
         <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
 
-            <Space
-                android:layout_width="533dp"
-                android:layout_height="74dp"
-                android:layout_weight="1" />
-
-            <Button
-                android:id="@+id/resetbutton"
+            <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="15dp"
-                android:layout_marginEnd="4dp"
-                android:onClick="onButtonClick"
-                android:text="リセット"
-                android:visibility="invisible"
-                tools:visibility="visible" />
+                android:orientation="horizontal">
 
-            <Button
-                android:id="@+id/setting"
-                android:layout_width="60dp"
-                android:layout_height="60dp"
-                android:layout_marginTop="15dp"
-                android:layout_marginEnd="32dp"
-                android:onClick="onButtonClick"
-                android:text="設定" />
-        </LinearLayout>
+                <Space
+                    android:layout_width="533dp"
+                    android:layout_height="74dp"
+                    android:layout_weight="1" />
 
-        <RelativeLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
+                <Button
+                    android:id="@+id/resetbutton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginEnd="4dp"
+                    android:onClick="onButtonClick"
+                    android:text="リセット"
+                    android:visibility="invisible"
+                    tools:visibility="visible" />
 
-            <ImageView
-                android:id="@+id/Hanamaru1"
-                android:layout_width="530dp"
-                android:layout_height="265dp"
-                android:translationZ="2dp"
-                android:visibility="invisible"
-                app:srcCompat="@drawable/hanamaru01"
-                tools:visibility="visible" />
+                <Button
+                    android:id="@+id/setting"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginEnd="32dp"
+                    android:onClick="onButtonClick"
+                    android:text="設定" />
+            </LinearLayout>
 
             <RelativeLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content">
 
-                <LinearLayout
-                    android:layout_width="666dp"
-                    android:layout_height="236dp"
-                    android:orientation="horizontal">
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
 
-                    <RelativeLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content">
+                    <LinearLayout
+                        android:layout_width="666dp"
+                        android:layout_height="236dp"
+                        android:orientation="horizontal">
+
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
 
 
-                        <Button
-                            android:id="@+id/button"
-                            android:layout_width="76dp"
-                            android:layout_height="230dp"
-                            android:layout_marginStart="52dp"
-                            android:background="#ffff4444"
-                            android:inputType="textMultiLine"
-                            android:onClick="onButtonClick"
-                            android:text="おきがえ"
-                            android:textAlignment="viewStart"
-                            android:textSize="36sp" />
+                            <Button
+                                android:id="@+id/button"
+                                android:layout_width="76dp"
+                                android:layout_height="230dp"
+                                android:layout_marginStart="52dp"
+                                android:background="#ffff4444"
+                                android:inputType="textMultiLine"
+                                android:onClick="onButtonClick"
+                                android:text="おきがえ"
+                                android:textAlignment="viewStart"
+                                android:textSize="36sp" />
 
-                        <ImageView
-                            android:id="@+id/imageView"
-                            android:layout_width="56dp"
-                            android:layout_height="67dp"
-                            android:layout_marginStart="60dp"
-                            android:layout_marginTop="80dp"
-                            android:layout_weight="1"
-                            android:translationZ="2dp"
-                            app:srcCompat="@drawable/pinb13" />
+                            <ImageView
+                                android:id="@+id/imageView"
+                                android:layout_width="56dp"
+                                android:layout_height="67dp"
+                                android:layout_marginStart="60dp"
+                                android:layout_marginTop="80dp"
+                                android:layout_weight="1"
+                                android:translationZ="2dp"
+                                app:srcCompat="@drawable/pinb13" />
 
-                        <ImageView
-                            android:id="@+id/maru1"
-                            android:layout_width="91dp"
-                            android:layout_height="124dp"
-                            android:layout_marginStart="44dp"
-                            android:layout_weight="1"
-                            android:translationZ="2dp"
-                            android:visibility="invisible"
-                            app:srcCompat="@drawable/maru"
-                            tools:visibility="visible" />
+                            <ImageView
+                                android:id="@+id/maru1"
+                                android:layout_width="91dp"
+                                android:layout_height="124dp"
+                                android:layout_marginStart="44dp"
+                                android:layout_weight="1"
+                                android:translationZ="2dp"
+                                android:visibility="invisible"
+                                app:srcCompat="@drawable/maru"
+                                tools:visibility="visible" />
 
-                    </RelativeLayout>
+                        </RelativeLayout>
 
-                    <RelativeLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content">
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
 
-                        <Button
-                            android:id="@+id/button2"
-                            android:layout_width="75dp"
-                            android:layout_height="230dp"
-                            android:layout_marginStart="32dp"
-                            android:background="#ffff4444"
-                            android:onClick="onButtonClick"
-                            android:text="はみがき"
-                            android:textSize="36sp" />
+                            <Button
+                                android:id="@+id/button2"
+                                android:layout_width="75dp"
+                                android:layout_height="230dp"
+                                android:layout_marginStart="32dp"
+                                android:background="#ffff4444"
+                                android:onClick="onButtonClick"
+                                android:text="はみがき"
+                                android:textSize="36sp" />
 
-                        <ImageView
-                            android:id="@+id/imageView2"
-                            android:layout_width="56dp"
-                            android:layout_height="67dp"
-                            android:layout_marginStart="60dp"
-                            android:layout_marginTop="80dp"
-                            android:layout_weight="1"
-                            android:translationZ="2dp"
-                            app:srcCompat="@drawable/pinb13" />
+                            <ImageView
+                                android:id="@+id/imageView2"
+                                android:layout_width="56dp"
+                                android:layout_height="67dp"
+                                android:layout_marginStart="60dp"
+                                android:layout_marginTop="80dp"
+                                android:layout_weight="1"
+                                android:translationZ="2dp"
+                                app:srcCompat="@drawable/pinb13" />
 
-                        <ImageView
-                            android:id="@+id/maru2"
-                            android:layout_width="91dp"
-                            android:layout_height="124dp"
-                            android:layout_marginStart="16dp"
-                            android:layout_weight="1"
-                            android:translationZ="2dp"
-                            android:visibility="invisible"
-                            app:srcCompat="@drawable/maru"
-                            tools:visibility="visible" />
-                    </RelativeLayout>
+                            <ImageView
+                                android:id="@+id/maru2"
+                                android:layout_width="91dp"
+                                android:layout_height="124dp"
+                                android:layout_marginStart="16dp"
+                                android:layout_weight="1"
+                                android:translationZ="2dp"
+                                android:visibility="invisible"
+                                app:srcCompat="@drawable/maru"
+                                tools:visibility="visible" />
+                        </RelativeLayout>
 
-                    <RelativeLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content">
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
 
-                        <Button
-                            android:id="@+id/button3"
-                            android:layout_width="75dp"
-                            android:layout_height="230dp"
-                            android:layout_marginStart="32dp"
-                            android:background="#ffff4444"
-                            android:onClick="onButtonClick"
-                            android:text="あさごはん"
-                            android:textSize="36sp" />
+                            <Button
+                                android:id="@+id/button3"
+                                android:layout_width="75dp"
+                                android:layout_height="230dp"
+                                android:layout_marginStart="32dp"
+                                android:background="#ffff4444"
+                                android:onClick="onButtonClick"
+                                android:text="あさごはん"
+                                android:textSize="36sp" />
 
-                        <ImageView
-                            android:id="@+id/imageView3"
-                            android:layout_width="56dp"
-                            android:layout_height="67dp"
-                            android:layout_marginStart="52dp"
-                            android:layout_marginTop="80dp"
-                            android:layout_weight="1"
-                            android:translationZ="2dp"
-                            app:srcCompat="@drawable/pinb13" />
+                            <ImageView
+                                android:id="@+id/imageView3"
+                                android:layout_width="56dp"
+                                android:layout_height="67dp"
+                                android:layout_marginStart="52dp"
+                                android:layout_marginTop="80dp"
+                                android:layout_weight="1"
+                                android:translationZ="2dp"
+                                app:srcCompat="@drawable/pinb13" />
 
-                        <ImageView
-                            android:id="@+id/maru3"
-                            android:layout_width="91dp"
-                            android:layout_height="124dp"
-                            android:layout_marginStart="16dp"
-                            android:layout_weight="1"
-                            android:translationZ="2dp"
-                            android:visibility="invisible"
-                            app:srcCompat="@drawable/maru"
-                            tools:visibility="visible" />
-                    </RelativeLayout>
+                            <ImageView
+                                android:id="@+id/maru3"
+                                android:layout_width="91dp"
+                                android:layout_height="124dp"
+                                android:layout_marginStart="16dp"
+                                android:layout_weight="1"
+                                android:translationZ="2dp"
+                                android:visibility="invisible"
+                                app:srcCompat="@drawable/maru"
+                                tools:visibility="visible" />
+                        </RelativeLayout>
 
-                    <RelativeLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content">
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
 
-                        <Button
-                            android:id="@+id/button4"
-                            android:layout_width="75dp"
-                            android:layout_height="230dp"
-                            android:layout_marginStart="32dp"
-                            android:background="#ffff4444"
-                            android:onClick="onButtonClick"
-                            android:text="ハンカチ"
-                            android:textSize="36sp" />
+                            <Button
+                                android:id="@+id/button4"
+                                android:layout_width="75dp"
+                                android:layout_height="230dp"
+                                android:layout_marginStart="32dp"
+                                android:background="#ffff4444"
+                                android:onClick="onButtonClick"
+                                android:text="ハンカチ"
+                                android:textSize="36sp" />
 
-                        <ImageView
-                            android:id="@+id/imageView4"
-                            android:layout_width="56dp"
-                            android:layout_height="67dp"
-                            android:layout_marginStart="52dp"
-                            android:layout_marginTop="80dp"
-                            android:layout_weight="1"
-                            android:translationZ="2dp"
-                            app:srcCompat="@drawable/pinb13" />
+                            <ImageView
+                                android:id="@+id/imageView4"
+                                android:layout_width="56dp"
+                                android:layout_height="67dp"
+                                android:layout_marginStart="52dp"
+                                android:layout_marginTop="80dp"
+                                android:layout_weight="1"
+                                android:translationZ="2dp"
+                                app:srcCompat="@drawable/pinb13" />
 
-                        <ImageView
-                            android:id="@+id/maru4"
-                            android:layout_width="91dp"
-                            android:layout_height="124dp"
-                            android:layout_marginStart="16dp"
-                            android:layout_weight="1"
-                            android:translationZ="2dp"
-                            android:visibility="invisible"
-                            app:srcCompat="@drawable/maru"
-                            tools:visibility="visible" />
-                    </RelativeLayout>
+                            <ImageView
+                                android:id="@+id/maru4"
+                                android:layout_width="91dp"
+                                android:layout_height="124dp"
+                                android:layout_marginStart="16dp"
+                                android:layout_weight="1"
+                                android:translationZ="2dp"
+                                android:visibility="invisible"
+                                app:srcCompat="@drawable/maru"
+                                tools:visibility="visible" />
+                        </RelativeLayout>
 
-                    <RelativeLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content">
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
 
-                        <Button
-                            android:id="@+id/button5"
-                            android:layout_width="75dp"
-                            android:layout_height="230dp"
-                            android:layout_marginStart="32dp"
-                            android:background="#ffff4444"
-                            android:onClick="onButtonClick"
-                            android:text="トイレ"
-                            android:textSize="36sp" />
+                            <Button
+                                android:id="@+id/button5"
+                                android:layout_width="75dp"
+                                android:layout_height="230dp"
+                                android:layout_marginStart="32dp"
+                                android:background="#ffff4444"
+                                android:onClick="onButtonClick"
+                                android:text="トイレ"
+                                android:textSize="36sp" />
 
-                        <ImageView
-                            android:id="@+id/maru5"
-                            android:layout_width="91dp"
-                            android:layout_height="124dp"
-                            android:layout_marginStart="16dp"
-                            android:layout_weight="1"
-                            android:translationZ="2dp"
-                            android:visibility="invisible"
-                            app:srcCompat="@drawable/maru"
-                            tools:visibility="visible" />
+                            <ImageView
+                                android:id="@+id/maru5"
+                                android:layout_width="91dp"
+                                android:layout_height="124dp"
+                                android:layout_marginStart="16dp"
+                                android:layout_weight="1"
+                                android:translationZ="2dp"
+                                android:visibility="invisible"
+                                app:srcCompat="@drawable/maru"
+                                tools:visibility="visible" />
 
-                        <ImageView
-                            android:id="@+id/imageView5"
-                            android:layout_width="56dp"
-                            android:layout_height="67dp"
-                            android:layout_marginStart="40dp"
-                            android:layout_marginTop="80dp"
-                            android:layout_weight="1"
-                            android:translationZ="2dp"
-                            app:srcCompat="@drawable/pinb13" />
-                    </RelativeLayout>
+                            <ImageView
+                                android:id="@+id/imageView5"
+                                android:layout_width="56dp"
+                                android:layout_height="67dp"
+                                android:layout_marginStart="40dp"
+                                android:layout_marginTop="80dp"
+                                android:layout_weight="1"
+                                android:translationZ="2dp"
+                                app:srcCompat="@drawable/pinb13" />
+                        </RelativeLayout>
 
-                </LinearLayout>
+                    </LinearLayout>
+                </RelativeLayout>
+
             </RelativeLayout>
 
-        </RelativeLayout>
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-
-            <Space
-                android:layout_width="500dp"
+            <LinearLayout
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_weight="1" />
+                android:orientation="horizontal">
 
-            <Button
-                android:id="@+id/button6"
-                android:layout_width="120dp"
-                android:layout_height="80dp"
-                android:onClick="onButtonClick"
-                android:text="花丸" />
+                <Space
+                    android:layout_width="500dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+
+                <Button
+                    android:id="@+id/button6"
+                    android:layout_width="120dp"
+                    android:layout_height="80dp"
+                    android:onClick="onButtonClick"
+                    android:text="花丸" />
+            </LinearLayout>
+
         </LinearLayout>
-
-    </LinearLayout>
+    </RelativeLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
