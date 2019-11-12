@@ -1,8 +1,10 @@
 package com.daddypooldev.daddyboard;
 
 import android.content.Context;
+import android.content.res.ColorStateList;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
+import android.graphics.drawable.RippleDrawable;
 import android.os.Bundle;
 import android.os.Handler;
 //import android.support.v7.app.AppCompatActivity;
@@ -37,11 +39,13 @@ public class Setting extends AppCompatActivity {
     private EditText editTextfuda4;
     private EditText editTextfuda5;
 
-//    private TextView iro1;
-//    private TextView iro2;
-//    private TextView iro3;
-//    private TextView iro4;
-//    private TextView iro5;
+    private TextView textView1;
+    private TextView textView2;
+    private TextView textView3;
+    private TextView textView4;
+    private TextView textView5;
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -53,11 +57,13 @@ public class Setting extends AppCompatActivity {
         editTextfuda4 = findViewById(R.id.editText_fuda4);
         editTextfuda5 = findViewById(R.id.editText_fuda5);
 
-//        iro1 = findViewById(R.id.iro1);
-//        iro2 = findViewById(R.id.iro2);
-//        iro3 = findViewById(R.id.iro3);
-//        iro4 = findViewById(R.id.iro4);
-//        iro5 = findViewById(R.id.iro5);
+        textView1 = findViewById(R.id.textView1);
+        textView2 = findViewById(R.id.textView2);
+        textView3 = findViewById(R.id.textView3);
+        textView4 = findViewById(R.id.textView4);
+        textView5 = findViewById(R.id.textView5);
+
+
 
         //色初期値　仮置き
 //        iro1.setBackgroundColor(Color.RED);
@@ -91,7 +97,7 @@ public class Setting extends AppCompatActivity {
                                     @Override
                                     public void onChooseColor(int position, int color) {
                                         Log.d("position", "" + position);// will be fired only when OK button was tapped
-//                                        iro1.setBackgroundColor(color);
+                                        fab.setBackgroundTintList(ColorStateList.valueOf(color));
                                     }
 
                                     @Override
@@ -135,6 +141,7 @@ public class Setting extends AppCompatActivity {
                                 @Override
                                 public void onChooseColor(int position, int color) {
                                     Log.d("position", "" + position);// will be fired only when OK button was tapped
+                                    fab2.setBackgroundTintList(ColorStateList.valueOf(color));
 //                                    iro2.setBackgroundColor(color);
                                 }
 
@@ -178,6 +185,7 @@ public class Setting extends AppCompatActivity {
                                 @Override
                                 public void onChooseColor(int position, int color) {
                                     Log.d("position", "" + position);// will be fired only when OK button was tapped
+                                    fab3.setBackgroundTintList(ColorStateList.valueOf(color));
 //                                    iro3.setBackgroundColor(color);
                                 }
 
@@ -221,6 +229,7 @@ public class Setting extends AppCompatActivity {
                                 @Override
                                 public void onChooseColor(int position, int color) {
                                     Log.d("position", "" + position);// will be fired only when OK button was tapped
+                                    fab4.setBackgroundTintList(ColorStateList.valueOf(color));
 //                                    iro4.setBackgroundColor(color);
                                 }
 
@@ -264,6 +273,7 @@ public class Setting extends AppCompatActivity {
                                 @Override
                                 public void onChooseColor(int position, int color) {
                                     Log.d("position", "" + position);// will be fired only when OK button was tapped
+                                    fab5.setBackgroundTintList(ColorStateList.valueOf(color));
 //                                    iro5.setBackgroundColor(color);
                                 }
 
@@ -296,30 +306,71 @@ public class Setting extends AppCompatActivity {
                     editTextfuda3.setVisibility(view.GONE);
                     editTextfuda4.setVisibility(view.GONE);
                     editTextfuda5.setVisibility(view.GONE);
+                    textView2.setVisibility(view.GONE);
+                    textView3.setVisibility(view.GONE);
+                    textView4.setVisibility(view.GONE);
+                    textView5.setVisibility(view.GONE);
+                    fab2.hide();
+                    fab3.hide();
+                    fab4.hide();
+                    fab5.hide();
+
                 }
                 else if (item.equals("2枚")){
                     editTextfuda2.setVisibility(view.VISIBLE);
                     editTextfuda3.setVisibility(view.GONE);
                     editTextfuda4.setVisibility(view.GONE);
                     editTextfuda5.setVisibility(view.GONE);
+                    textView2.setVisibility(view.VISIBLE);
+                    textView3.setVisibility(view.GONE);
+                    textView4.setVisibility(view.GONE);
+                    textView5.setVisibility(view.GONE);
+                    fab2.show();
+                    fab3.hide();
+                    fab4.hide();
+                    fab5.hide();
                 }
                 else if (item.equals("3枚")){
                     editTextfuda2.setVisibility(view.VISIBLE);
                     editTextfuda3.setVisibility(view.VISIBLE);
                     editTextfuda4.setVisibility(view.GONE);
                     editTextfuda5.setVisibility(view.GONE);
+                    textView2.setVisibility(view.VISIBLE);
+                    textView3.setVisibility(view.VISIBLE);
+                    textView4.setVisibility(view.GONE);
+                    textView5.setVisibility(view.GONE);
+                    fab2.show();
+                    fab3.show();
+                    fab4.hide();
+                    fab5.hide();
                 }
                 else if (item.equals("4枚")){
                     editTextfuda2.setVisibility(view.VISIBLE);
                     editTextfuda3.setVisibility(view.VISIBLE);
                     editTextfuda4.setVisibility(view.VISIBLE);
                     editTextfuda5.setVisibility(view.GONE);
+                    textView2.setVisibility(view.VISIBLE);
+                    textView3.setVisibility(view.VISIBLE);
+                    textView4.setVisibility(view.VISIBLE);
+                    textView5.setVisibility(view.GONE);
+                    fab2.show();
+                    fab3.show();
+                    fab4.show();
+                    fab5.hide();
                 }
                 else if (item.equals("5枚")){
                     editTextfuda2.setVisibility(view.VISIBLE);
                     editTextfuda3.setVisibility(view.VISIBLE);
                     editTextfuda4.setVisibility(view.VISIBLE);
                     editTextfuda5.setVisibility(view.VISIBLE);
+                    textView2.setVisibility(view.VISIBLE);
+                    textView3.setVisibility(view.VISIBLE);
+                    textView4.setVisibility(view.VISIBLE);
+                    textView5.setVisibility(view.VISIBLE);
+                    fab2.show();
+                    fab3.show();
+                    fab4.show();
+                    fab5.show();
                 }
 
 
@@ -374,35 +425,36 @@ public class Setting extends AppCompatActivity {
         fileName = "iro1";
         String str6 = readFile(fileName);
         if (str6 != null) {
-            fab.setBackgroundColor(Integer.parseInt(str6));
+            fab.setBackgroundTintList(ColorStateList.valueOf(Integer.parseInt(str6)));
+//            fab.setBackgroundColor(Integer.parseInt(str6));
         } else {
             ;
         }
         fileName = "iro2";
         String str7 = readFile(fileName);
         if (str7 != null) {
-            fab2.setBackgroundColor(Integer.parseInt(str7));
+            fab2.setBackgroundTintList(ColorStateList.valueOf(Integer.parseInt(str7)));
         } else {
             ;
         }
         fileName = "iro3";
         String str8 = readFile(fileName);
         if (str8 != null) {
-            fab3.setBackgroundColor(Integer.parseInt(str8));
+            fab3.setBackgroundTintList(ColorStateList.valueOf(Integer.parseInt(str8)));
         } else {
             ;
         }
         fileName = "iro4";
         String str9 = readFile(fileName);
         if (str9 != null) {
-            fab4.setBackgroundColor(Integer.parseInt(str9));
+            fab4.setBackgroundTintList(ColorStateList.valueOf(Integer.parseInt(str9)));
         } else {
             ;
         }
         fileName = "iro5";
         String str10 = readFile(fileName);
         if (str10 != null) {
-            fab5.setBackgroundColor(Integer.parseInt(str10));
+            fab5.setBackgroundTintList(ColorStateList.valueOf(Integer.parseInt(str10)));
         } else {
             ;
         }
@@ -447,24 +499,22 @@ public class Setting extends AppCompatActivity {
 
                 //>>色の保存
                 fileName = "iro1";
-                ColorDrawable color_drawable1 = (ColorDrawable)fab.getBackground();
-                text = String.valueOf(color_drawable1.getColor());
+//                RippleDrawable color_drawable1 = fab.getBackgroundTintList();
+                text = String.valueOf(fab.getBackgroundTintList().getDefaultColor());
                 saveFile(fileName, text);
                 fileName = "iro2";
-                ColorDrawable color_drawable2 = (ColorDrawable)fab2.getBackground();
-                text = String.valueOf(color_drawable2.getColor());
+//                ColorDrawable color_drawable2 = (ColorDrawable)fab2.getBackground();
+//                text = String.valueOf(color_drawable2.getColor());
+                text = String.valueOf(fab2.getBackgroundTintList().getDefaultColor());
                 saveFile(fileName, text);
                 fileName = "iro3";
-                ColorDrawable color_drawable3 = (ColorDrawable)fab3.getBackground();
-                text = String.valueOf(color_drawable3.getColor());
+                text = String.valueOf(fab3.getBackgroundTintList().getDefaultColor());
                 saveFile(fileName, text);
                 fileName = "iro4";
-                ColorDrawable color_drawable4 = (ColorDrawable)fab4.getBackground();
-                text = String.valueOf(color_drawable4.getColor());
+                text = String.valueOf(fab4.getBackgroundTintList().getDefaultColor());
                 saveFile(fileName, text);
                 fileName = "iro5";
-                ColorDrawable color_drawable5 = (ColorDrawable)fab5.getBackground();
-                text = String.valueOf(color_drawable5.getColor());
+                text = String.valueOf(fab5.getBackgroundTintList().getDefaultColor());
                 saveFile(fileName, text);
 
                 //プルダウンの保存
