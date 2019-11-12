@@ -93,7 +93,7 @@ public class MainActivity extends AppCompatActivity {
 //            for(int count = 1 ; count < str1.length() ; count++) {
 //                kaigyou.insert(13,"\\n");
 //            }
-            Button button = findViewById(R.id.button);
+            TextView button = findViewById(R.id.textView6);
             button.setText(str1);
 //            button.setBackgroundColor(Integer.parseInt(iro1));
 
@@ -103,7 +103,7 @@ public class MainActivity extends AppCompatActivity {
         fileName = "fuda2";
         String str2 = readFile(fileName);
         if (str2 != null) {
-            Button button2 = findViewById(R.id.button2);
+            TextView button2 = findViewById(R.id.textView7);
             button2.setText(str2);
         } else {
             //editTextfuda2.setText("");
@@ -112,7 +112,7 @@ public class MainActivity extends AppCompatActivity {
         fileName = "fuda3";
         String str3 = readFile(fileName);
         if (str3 != null) {
-            Button button3 = findViewById(R.id.button3);
+            TextView button3 = findViewById(R.id.textView8);
             button3.setText(str3);
         } else {
             //editTextfuda3.setText("");
@@ -121,7 +121,7 @@ public class MainActivity extends AppCompatActivity {
         fileName = "fuda4";
         String str4 = readFile(fileName);
         if (str4 != null) {
-            Button button4 = findViewById(R.id.button4);
+            TextView button4 = findViewById(R.id.textView9);
             button4.setText(str4);
         } else {
             //editTextfuda4.setText("");
@@ -130,7 +130,7 @@ public class MainActivity extends AppCompatActivity {
         fileName = "fuda5";
         String str5 = readFile(fileName);
         if (str5 != null) {
-            Button button5 = findViewById(R.id.button5);
+            TextView button5 = findViewById(R.id.textView10);
             button5.setText(str5);
         } else {
             //editTextfuda5.setText("");
