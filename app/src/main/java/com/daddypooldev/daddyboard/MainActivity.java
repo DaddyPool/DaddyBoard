@@ -36,7 +36,7 @@ public class MainActivity extends AppCompatActivity {
     boolean onbutton3=false;
     boolean onbutton4=false;
     boolean onbutton5=false;
-
+    int maisuuC;
 //    String kaigyou;
 
     private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener
@@ -187,6 +187,7 @@ public class MainActivity extends AppCompatActivity {
                     onbutton3 = true;
                     onbutton4 = true;
                     onbutton5 = true;
+                    maisuuC=1;
                     break;
                 case "1":
                     findViewById(R.id.button).setVisibility(View.VISIBLE);
@@ -199,6 +200,7 @@ public class MainActivity extends AppCompatActivity {
                     onbutton3 = true;
                     onbutton4 = true;
                     onbutton5 = true;
+                    maisuuC=2;
                     break;
                 case "2":
                     findViewById(R.id.button).setVisibility(View.VISIBLE);
@@ -211,6 +213,7 @@ public class MainActivity extends AppCompatActivity {
                     onbutton3 = false;
                     onbutton4 = true;
                     onbutton5 = true;
+                    maisuuC=3;
                     break;
                 case "3":
                     findViewById(R.id.button).setVisibility(View.VISIBLE);
@@ -223,6 +226,7 @@ public class MainActivity extends AppCompatActivity {
                     onbutton3 = false;
                     onbutton4 = false;
                     onbutton5 = true;
+                    maisuuC=4;
                     break;
                 case "4":
                     findViewById(R.id.button).setVisibility(View.VISIBLE);
@@ -235,6 +239,7 @@ public class MainActivity extends AppCompatActivity {
                     onbutton3 = false;
                     onbutton4 = false;
                     onbutton5 = false;
+                    maisuuC=5;
                     break;
                 default:
             }
@@ -305,12 +310,34 @@ public class MainActivity extends AppCompatActivity {
                 findViewById(R.id.maru5).setVisibility(View.INVISIBLE);
                 findViewById(R.id.Hanamaru1).setVisibility(View.INVISIBLE);
                 findViewById(R.id.resetbutton).setVisibility(View.INVISIBLE);
-                onbutton1 = false;
-                onbutton2 = false;
-                onbutton3 = false;
-                onbutton4 = false;
-                onbutton5 = false;
-
+                switch (maisuuC) {
+                    case 1:
+                        onbutton1 = false;
+                        break;
+                    case 2:
+                        onbutton1 = false;
+                        onbutton2 = false;
+                        break;
+                    case 3:
+                        onbutton1 = false;
+                        onbutton2 = false;
+                        onbutton3 = false;
+                        break;
+                    case 4:
+                        onbutton1 = false;
+                        onbutton2 = false;
+                        onbutton3 = false;
+                        onbutton4 = false;
+                        break;
+                    case 5:
+                        onbutton1 = false;
+                        onbutton2 = false;
+                        onbutton3 = false;
+                        onbutton4 = false;
+                        onbutton5 = false;
+                        break;
+                    default:
+                }
                 break;
             case R.id.setting:
                 Intent intent = new Intent(this, Setting.class);
