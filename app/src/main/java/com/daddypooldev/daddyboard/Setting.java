@@ -37,11 +37,11 @@ public class Setting extends AppCompatActivity {
     private EditText editTextfuda4;
     private EditText editTextfuda5;
 
-    private TextView iro1;
-    private TextView iro2;
-    private TextView iro3;
-    private TextView iro4;
-    private TextView iro5;
+//    private TextView iro1;
+//    private TextView iro2;
+//    private TextView iro3;
+//    private TextView iro4;
+//    private TextView iro5;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -53,20 +53,20 @@ public class Setting extends AppCompatActivity {
         editTextfuda4 = findViewById(R.id.editText_fuda4);
         editTextfuda5 = findViewById(R.id.editText_fuda5);
 
-        iro1 = findViewById(R.id.iro1);
-        iro2 = findViewById(R.id.iro2);
-        iro3 = findViewById(R.id.iro3);
-        iro4 = findViewById(R.id.iro4);
-        iro5 = findViewById(R.id.iro5);
+//        iro1 = findViewById(R.id.iro1);
+//        iro2 = findViewById(R.id.iro2);
+//        iro3 = findViewById(R.id.iro3);
+//        iro4 = findViewById(R.id.iro4);
+//        iro5 = findViewById(R.id.iro5);
 
         //色初期値　仮置き
-        iro1.setBackgroundColor(Color.RED);
-        iro2.setBackgroundColor(Color.YELLOW);
-        iro3.setBackgroundColor(Color.GREEN);
-        iro4.setBackgroundColor(Color.BLUE);
-        iro5.setBackgroundColor(Color.MAGENTA);
+//        iro1.setBackgroundColor(Color.RED);
+//        iro2.setBackgroundColor(Color.YELLOW);
+//        iro3.setBackgroundColor(Color.GREEN);
+//        iro4.setBackgroundColor(Color.BLUE);
+//        iro5.setBackgroundColor(Color.MAGENTA);
 
-        final FloatingActionButton fab = findViewById(R.id.fab);
+        final FloatingActionButton fab = findViewById(R.id.fab1);
             if (fab != null) {
                 fab.setOnClickListener(new View.OnClickListener() {
                     @Override
@@ -91,7 +91,7 @@ public class Setting extends AppCompatActivity {
                                     @Override
                                     public void onChooseColor(int position, int color) {
                                         Log.d("position", "" + position);// will be fired only when OK button was tapped
-                                        iro1.setBackgroundColor(color);
+//                                        iro1.setBackgroundColor(color);
                                     }
 
                                     @Override
@@ -135,7 +135,7 @@ public class Setting extends AppCompatActivity {
                                 @Override
                                 public void onChooseColor(int position, int color) {
                                     Log.d("position", "" + position);// will be fired only when OK button was tapped
-                                    iro2.setBackgroundColor(color);
+//                                    iro2.setBackgroundColor(color);
                                 }
 
                                 @Override
@@ -178,7 +178,7 @@ public class Setting extends AppCompatActivity {
                                 @Override
                                 public void onChooseColor(int position, int color) {
                                     Log.d("position", "" + position);// will be fired only when OK button was tapped
-                                    iro3.setBackgroundColor(color);
+//                                    iro3.setBackgroundColor(color);
                                 }
 
                                 @Override
@@ -221,7 +221,7 @@ public class Setting extends AppCompatActivity {
                                 @Override
                                 public void onChooseColor(int position, int color) {
                                     Log.d("position", "" + position);// will be fired only when OK button was tapped
-                                    iro4.setBackgroundColor(color);
+//                                    iro4.setBackgroundColor(color);
                                 }
 
                                 @Override
@@ -264,7 +264,7 @@ public class Setting extends AppCompatActivity {
                                 @Override
                                 public void onChooseColor(int position, int color) {
                                     Log.d("position", "" + position);// will be fired only when OK button was tapped
-                                    iro5.setBackgroundColor(color);
+//                                    iro5.setBackgroundColor(color);
                                 }
 
                                 @Override
@@ -374,35 +374,35 @@ public class Setting extends AppCompatActivity {
         fileName = "iro1";
         String str6 = readFile(fileName);
         if (str6 != null) {
-            iro1.setBackgroundColor(Integer.parseInt(str6));
+            fab.setBackgroundColor(Integer.parseInt(str6));
         } else {
             ;
         }
         fileName = "iro2";
         String str7 = readFile(fileName);
         if (str7 != null) {
-            iro2.setBackgroundColor(Integer.parseInt(str7));
+            fab2.setBackgroundColor(Integer.parseInt(str7));
         } else {
             ;
         }
         fileName = "iro3";
         String str8 = readFile(fileName);
         if (str8 != null) {
-            iro3.setBackgroundColor(Integer.parseInt(str8));
+            fab3.setBackgroundColor(Integer.parseInt(str8));
         } else {
             ;
         }
         fileName = "iro4";
         String str9 = readFile(fileName);
         if (str9 != null) {
-            iro4.setBackgroundColor(Integer.parseInt(str9));
+            fab4.setBackgroundColor(Integer.parseInt(str9));
         } else {
             ;
         }
         fileName = "iro5";
         String str10 = readFile(fileName);
         if (str10 != null) {
-            iro5.setBackgroundColor(Integer.parseInt(str10));
+            fab5.setBackgroundColor(Integer.parseInt(str10));
         } else {
             ;
         }
@@ -447,23 +447,23 @@ public class Setting extends AppCompatActivity {
 
                 //>>色の保存
                 fileName = "iro1";
-                ColorDrawable color_drawable1 = (ColorDrawable)iro1.getBackground();
+                ColorDrawable color_drawable1 = (ColorDrawable)fab.getBackground();
                 text = String.valueOf(color_drawable1.getColor());
                 saveFile(fileName, text);
                 fileName = "iro2";
-                ColorDrawable color_drawable2 = (ColorDrawable)iro2.getBackground();
+                ColorDrawable color_drawable2 = (ColorDrawable)fab2.getBackground();
                 text = String.valueOf(color_drawable2.getColor());
                 saveFile(fileName, text);
                 fileName = "iro3";
-                ColorDrawable color_drawable3 = (ColorDrawable)iro3.getBackground();
+                ColorDrawable color_drawable3 = (ColorDrawable)fab3.getBackground();
                 text = String.valueOf(color_drawable3.getColor());
                 saveFile(fileName, text);
                 fileName = "iro4";
-                ColorDrawable color_drawable4 = (ColorDrawable)iro4.getBackground();
+                ColorDrawable color_drawable4 = (ColorDrawable)fab4.getBackground();
                 text = String.valueOf(color_drawable4.getColor());
                 saveFile(fileName, text);
                 fileName = "iro5";
-                ColorDrawable color_drawable5 = (ColorDrawable)iro5.getBackground();
+                ColorDrawable color_drawable5 = (ColorDrawable)fab5.getBackground();
                 text = String.valueOf(color_drawable5.getColor());
                 saveFile(fileName, text);
 
