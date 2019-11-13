@@ -1,6 +1,8 @@
 package com.daddypooldev.daddyboard;
 
+import android.app.Dialog;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.res.ColorStateList;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
@@ -8,7 +10,10 @@ import android.graphics.drawable.RippleDrawable;
 import android.os.Bundle;
 import android.os.Handler;
 //import android.support.v7.app.AppCompatActivity;
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.DialogFragment;
+
 import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
@@ -28,6 +33,8 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.BufferedReader;
+
+import static android.app.PendingIntent.getActivity;
 
 public class Setting extends AppCompatActivity {
 
@@ -63,7 +70,14 @@ public class Setting extends AppCompatActivity {
         textView4 = findViewById(R.id.textView4);
         textView5 = findViewById(R.id.textView5);
 
-
+        //保存時のメッセージダイアログ
+        final AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setMessage("保存しました。")
+                .setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int id) {
+                    // ボタンをクリックしたときの動作
+                    }
+                });
 
         //色初期値　仮置き
 //        iro1.setBackgroundColor(Color.RED);
@@ -521,6 +535,11 @@ public class Setting extends AppCompatActivity {
                 fileName = "maisu";
                 text = String.valueOf(sp.getSelectedItemId());
                 saveFile(fileName, text);
+
+
+                //保存しましたのメッセージを表示
+                builder.show();
+
             }
         });
         Button buttonBack = findViewById(R.id.buttonBack);
@@ -569,8 +588,6 @@ public class Setting extends AppCompatActivity {
         return text;
     }
 
-    // 札枚数選択
-    //final Spinner sp=(Spinner)findViewById(R.id.spinner);
 
 
 
