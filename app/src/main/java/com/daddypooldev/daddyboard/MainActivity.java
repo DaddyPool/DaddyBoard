@@ -2,6 +2,10 @@ package com.daddypooldev.daddyboard;
 
 import android.content.Intent;
 import android.graphics.Color;
+import android.media.AudioAttributes;
+import android.media.AudioManager;
+import android.media.SoundPool;
+import android.os.Build;
 import android.os.Bundle;
 //import android.support.annotation.NonNull;
 //import android.support.design.widget.BottomNavigationView;
@@ -37,7 +41,20 @@ public class MainActivity extends AppCompatActivity {
     boolean onbutton4=false;
     boolean onbutton5=false;
     int maisuuC;
-//    String kaigyou;
+
+    //音楽用のフィールドとSoundPoolのフィールド
+    int mp3a;
+    int mp3b;
+    int mp3c;
+    SoundPool soundPool;
+    //音楽再生用のメソッド
+    public void play_mp3a(){soundPool.play(mp3a,1f , 1f, 0, 0, 1f);};
+    public void play_mp3b(){soundPool.play(mp3b,1f , 1f, 0, 0, 1f);};
+    public void play_mp3c(){soundPool.play(mp3c,1f , 1f, 0, 0, 1f);};
+
+
+
+
 
     private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener
             = new BottomNavigationView.OnNavigationItemSelectedListener() {
@@ -77,6 +94,27 @@ public class MainActivity extends AppCompatActivity {
 //
 //            }
 //        });
+        //soundPoolの初期化
+        if (Build.VERSION.SDK_INT < Build.VERSION_CODES.LOLLIPOP) {
+
+            //1個目のパラメーターはリソースの数に合わせる
+            soundPool = new SoundPool(3, AudioManager.STREAM_MUSIC, 0);
+
+        } else {
+            AudioAttributes attr = new AudioAttributes.Builder()
+                    .setUsage(AudioAttributes.USAGE_MEDIA)
+                    .setContentType(AudioAttributes.CONTENT_TYPE_MUSIC)
+                    .build();
+            soundPool = new SoundPool.Builder()
+                    .setAudioAttributes(attr)
+                    //パラメーターはリソースの数に合わせる
+                    .setMaxStreams(3)
+                    .build();
+        }
+        //音楽の読み込み
+        mp3a = soundPool.load(this, R.raw.boyoyon1, 1);
+        mp3b = soundPool.load(this, R.raw.kotsudumi1, 1);
+        mp3c = soundPool.load(this, R.raw.trumpet1, 1);
     }
 
     @Override
@@ -86,16 +124,17 @@ public class MainActivity extends AppCompatActivity {
         super.onResume();
         fileName = "fuda1";
         String str1 = readFile(fileName);
-//        fileName = "iro1";
-//        String iro1 = readFile(fileName);
 //        kaigyou = str1;
         if (str1 != null) {
-//            for(int count = 1 ; count < str1.length() ; count++) {
-//                kaigyou.insert(13,"\\n");
-//            }
             TextView button = findViewById(R.id.textView6);
             button.setText(str1);
-//            button.setBackgroundColor(Integer.parseInt(iro1));
+            if(str1.length() <= 3) {
+                button.setTextSize(36);
+            }else if(str1.length() <= 6){
+                button.setTextSize(36);
+            }else{
+                button.setTextSize(18);
+            }
 
         } else {
             //editTextfuda1.setText("");
@@ -105,6 +144,13 @@ public class MainActivity extends AppCompatActivity {
         if (str2 != null) {
             TextView button2 = findViewById(R.id.textView7);
             button2.setText(str2);
+            if(str1.length() <= 3) {
+                button2.setTextSize(36);
+            }else if(str1.length() <= 6){
+                button2.setTextSize(36);
+            }else{
+                button2.setTextSize(18);
+            }
         } else {
             //editTextfuda2.setText("");
         }
@@ -114,6 +160,13 @@ public class MainActivity extends AppCompatActivity {
         if (str3 != null) {
             TextView button3 = findViewById(R.id.textView8);
             button3.setText(str3);
+            if(str1.length() <= 3) {
+                button3.setTextSize(36);
+            }else if(str1.length() <= 6){
+                button3.setTextSize(36);
+            }else{
+                button3.setTextSize(18);
+            }
         } else {
             //editTextfuda3.setText("");
         }
@@ -123,6 +176,13 @@ public class MainActivity extends AppCompatActivity {
         if (str4 != null) {
             TextView button4 = findViewById(R.id.textView9);
             button4.setText(str4);
+            if(str1.length() <= 3) {
+                button4.setTextSize(36);
+            }else if(str1.length() <= 6){
+                button4.setTextSize(36);
+            }else{
+                button4.setTextSize(18);
+            }
         } else {
             //editTextfuda4.setText("");
         }
@@ -132,6 +192,13 @@ public class MainActivity extends AppCompatActivity {
         if (str5 != null) {
             TextView button5 = findViewById(R.id.textView10);
             button5.setText(str5);
+            if(str1.length() <= 3) {
+                button5.setTextSize(36);
+            }else if(str1.length() <= 6){
+                button5.setTextSize(36);
+            }else{
+                button5.setTextSize(18);
+            }
         } else {
             //editTextfuda5.setText("");
         }
@@ -182,6 +249,19 @@ public class MainActivity extends AppCompatActivity {
                     findViewById(R.id.button3).setVisibility(View.GONE);
                     findViewById(R.id.button4).setVisibility(View.GONE);
                     findViewById(R.id.button5).setVisibility(View.GONE);
+
+                    findViewById(R.id.textView6).setVisibility(View.VISIBLE);
+                    findViewById(R.id.textView7).setVisibility(View.GONE);
+                    findViewById(R.id.textView8).setVisibility(View.GONE);
+                    findViewById(R.id.textView9).setVisibility(View.GONE);
+                    findViewById(R.id.textView10).setVisibility(View.GONE);
+
+                    findViewById(R.id.imageView).setVisibility(View.VISIBLE);
+                    findViewById(R.id.imageView2).setVisibility(View.GONE);
+                    findViewById(R.id.imageView3).setVisibility(View.GONE);
+                    findViewById(R.id.imageView4).setVisibility(View.GONE);
+                    findViewById(R.id.imageView5).setVisibility(View.GONE);
+
                     onbutton1 = false;
                     onbutton2 = true;
                     onbutton3 = true;
@@ -195,6 +275,19 @@ public class MainActivity extends AppCompatActivity {
                     findViewById(R.id.button3).setVisibility(View.GONE);
                     findViewById(R.id.button4).setVisibility(View.GONE);
                     findViewById(R.id.button5).setVisibility(View.GONE);
+
+                    findViewById(R.id.textView6).setVisibility(View.VISIBLE);
+                    findViewById(R.id.textView7).setVisibility(View.VISIBLE);
+                    findViewById(R.id.textView8).setVisibility(View.GONE);
+                    findViewById(R.id.textView9).setVisibility(View.GONE);
+                    findViewById(R.id.textView10).setVisibility(View.GONE);
+
+                    findViewById(R.id.imageView).setVisibility(View.VISIBLE);
+                    findViewById(R.id.imageView2).setVisibility(View.VISIBLE);
+                    findViewById(R.id.imageView3).setVisibility(View.GONE);
+                    findViewById(R.id.imageView4).setVisibility(View.GONE);
+                    findViewById(R.id.imageView5).setVisibility(View.GONE);
+
                     onbutton1 = false;
                     onbutton2 = false;
                     onbutton3 = true;
@@ -208,6 +301,19 @@ public class MainActivity extends AppCompatActivity {
                     findViewById(R.id.button3).setVisibility(View.VISIBLE);
                     findViewById(R.id.button4).setVisibility(View.GONE);
                     findViewById(R.id.button5).setVisibility(View.GONE);
+
+                    findViewById(R.id.textView6).setVisibility(View.VISIBLE);
+                    findViewById(R.id.textView7).setVisibility(View.VISIBLE);
+                    findViewById(R.id.textView8).setVisibility(View.VISIBLE);
+                    findViewById(R.id.textView9).setVisibility(View.GONE);
+                    findViewById(R.id.textView10).setVisibility(View.GONE);
+
+                    findViewById(R.id.imageView).setVisibility(View.VISIBLE);
+                    findViewById(R.id.imageView2).setVisibility(View.VISIBLE);
+                    findViewById(R.id.imageView3).setVisibility(View.VISIBLE);
+                    findViewById(R.id.imageView4).setVisibility(View.GONE);
+                    findViewById(R.id.imageView5).setVisibility(View.GONE);
+
                     onbutton1 = false;
                     onbutton2 = false;
                     onbutton3 = false;
@@ -221,6 +327,19 @@ public class MainActivity extends AppCompatActivity {
                     findViewById(R.id.button3).setVisibility(View.VISIBLE);
                     findViewById(R.id.button4).setVisibility(View.VISIBLE);
                     findViewById(R.id.button5).setVisibility(View.GONE);
+
+                    findViewById(R.id.textView6).setVisibility(View.VISIBLE);
+                    findViewById(R.id.textView7).setVisibility(View.VISIBLE);
+                    findViewById(R.id.textView8).setVisibility(View.VISIBLE);
+                    findViewById(R.id.textView9).setVisibility(View.VISIBLE);
+                    findViewById(R.id.textView10).setVisibility(View.GONE);
+
+                    findViewById(R.id.imageView).setVisibility(View.VISIBLE);
+                    findViewById(R.id.imageView2).setVisibility(View.VISIBLE);
+                    findViewById(R.id.imageView3).setVisibility(View.VISIBLE);
+                    findViewById(R.id.imageView4).setVisibility(View.VISIBLE);
+                    findViewById(R.id.imageView5).setVisibility(View.GONE);
+
                     onbutton1 = false;
                     onbutton2 = false;
                     onbutton3 = false;
@@ -234,6 +353,19 @@ public class MainActivity extends AppCompatActivity {
                     findViewById(R.id.button3).setVisibility(View.VISIBLE);
                     findViewById(R.id.button4).setVisibility(View.VISIBLE);
                     findViewById(R.id.button5).setVisibility(View.VISIBLE);
+
+                    findViewById(R.id.textView6).setVisibility(View.VISIBLE);
+                    findViewById(R.id.textView7).setVisibility(View.VISIBLE);
+                    findViewById(R.id.textView8).setVisibility(View.VISIBLE);
+                    findViewById(R.id.textView9).setVisibility(View.VISIBLE);
+                    findViewById(R.id.textView10).setVisibility(View.VISIBLE);
+
+                    findViewById(R.id.imageView).setVisibility(View.VISIBLE);
+                    findViewById(R.id.imageView2).setVisibility(View.VISIBLE);
+                    findViewById(R.id.imageView3).setVisibility(View.VISIBLE);
+                    findViewById(R.id.imageView4).setVisibility(View.VISIBLE);
+                    findViewById(R.id.imageView5).setVisibility(View.VISIBLE);
+
                     onbutton1 = false;
                     onbutton2 = false;
                     onbutton3 = false;
@@ -254,6 +386,7 @@ public class MainActivity extends AppCompatActivity {
                 if(onbutton1 == false) {
                     findViewById(R.id.maru1).setVisibility(View.VISIBLE);
                     onbutton1 = true;
+                    play_mp3a();//音楽再生用のメソッドを呼び出す
                 }else{
                     findViewById(R.id.maru1).setVisibility(View.INVISIBLE);
                     onbutton1 = false;
@@ -263,6 +396,7 @@ public class MainActivity extends AppCompatActivity {
                 if(onbutton2 == false) {
                     findViewById(R.id.maru2).setVisibility(View.VISIBLE);
                     onbutton2 = true;
+                    play_mp3b();//音楽再生用のメソッドを呼び出す
                 }else{
                     findViewById(R.id.maru2).setVisibility(View.INVISIBLE);
                     onbutton2 = false;
@@ -272,6 +406,7 @@ public class MainActivity extends AppCompatActivity {
                 if(onbutton3 == false) {
                     findViewById(R.id.maru3).setVisibility(View.VISIBLE);
                     onbutton3 = true;
+                    play_mp3c();//音楽再生用のメソッドを呼び出す
                 }else{
                     findViewById(R.id.maru3).setVisibility(View.INVISIBLE);
                     onbutton3 = false;
@@ -281,6 +416,7 @@ public class MainActivity extends AppCompatActivity {
                 if(onbutton4 == false) {
                     findViewById(R.id.maru4).setVisibility(View.VISIBLE);
                     onbutton4 = true;
+                    play_mp3a();//音楽再生用のメソッドを呼び出す
                 }else{
                     findViewById(R.id.maru4).setVisibility(View.INVISIBLE);
                     onbutton4 = false;
@@ -290,6 +426,7 @@ public class MainActivity extends AppCompatActivity {
                 if(onbutton5 == false) {
                     findViewById(R.id.maru5).setVisibility(View.VISIBLE);
                     onbutton5 = true;
+                    play_mp3a();//音楽再生用のメソッドを呼び出す
                 }else{
                     findViewById(R.id.maru5).setVisibility(View.INVISIBLE);
                     onbutton5 = false;
