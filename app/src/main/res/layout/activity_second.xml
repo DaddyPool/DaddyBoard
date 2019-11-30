@@ -18,83 +18,185 @@
             android:id="@+id/button20"
             android:layout_width="match_parent"
             android:layout_height="80dp"
-            android:text="Button" />
+            android:onClick="onButtonClick"
+            android:text="設定" />
 
         <Button
             android:id="@+id/button19"
             android:layout_width="match_parent"
             android:layout_height="80dp"
+            android:onClick="onButtonClick"
             android:text="Button" />
 
         <Button
-            android:id="@+id/button18"
+            android:id="@+id/resetbutton2"
             android:layout_width="match_parent"
             android:layout_height="80dp"
-            android:text="Button" />
+            android:onClick="onButtonClick"
+            android:visibility="invisible"
+            tools:visibility="visible"
+            android:text="リセット" />
     </LinearLayout>
 
-    <LinearLayout
+    <FrameLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="100dp"
-        android:layout_marginTop="100dp"
-        android:orientation="vertical"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
         <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:layout_width="450dp"
+            android:layout_height="300dp"
+            android:layout_marginStart="50dp"
+            android:layout_marginTop="50dp"
+            android:background="@drawable/corkboard02"
+            android:orientation="vertical">
 
-            <Button
-                android:id="@+id/button12"
-                android:layout_width="150dp"
-                android:layout_height="150dp"
-                android:layout_weight="1"
-                android:text="Button" />
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
 
-            <Button
-                android:id="@+id/button13"
-                android:layout_width="150dp"
-                android:layout_height="150dp"
-                android:layout_weight="1"
-                android:text="Button" />
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
 
-            <Button
-                android:id="@+id/button14"
-                android:layout_width="150dp"
-                android:layout_height="150dp"
-                android:layout_weight="1"
-                android:text="Button" />
+                    <Button
+                        android:id="@+id/button12"
+                        android:layout_width="150dp"
+                        android:layout_height="150dp"
+                        android:layout_weight="1"
+                        android:onClick="onButtonClick"
+                        android:text="おきがえ" />
+
+                    <Button
+                        android:id="@+id/button13"
+                        android:layout_width="150dp"
+                        android:layout_height="150dp"
+                        android:layout_weight="1"
+                        android:onClick="onButtonClick"
+                        android:text="おきがえ" />
+
+                    <Button
+                        android:id="@+id/button14"
+                        android:layout_width="150dp"
+                        android:layout_height="150dp"
+                        android:layout_weight="1"
+                        android:onClick="onButtonClick"
+                        android:text="おきがえ" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/maru21"
+                        android:layout_width="150dp"
+                        android:layout_height="150dp"
+                        android:layout_weight="1"
+                        android:visibility="invisible"
+                        app:srcCompat="@drawable/maru"
+                        tools:visibility="visible" />
+
+                    <ImageView
+                        android:id="@+id/maru22"
+                        android:layout_width="150dp"
+                        android:layout_height="150dp"
+                        android:layout_weight="1"
+                        android:visibility="invisible"
+                        app:srcCompat="@drawable/maru"
+                        tools:visibility="visible" />
+
+                    <ImageView
+                        android:id="@+id/maru23"
+                        android:layout_width="150dp"
+                        android:layout_height="150dp"
+                        android:layout_weight="1"
+                        android:visibility="invisible"
+                        app:srcCompat="@drawable/maru"
+                        tools:visibility="visible" />
+                </LinearLayout>
+
+            </FrameLayout>
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/button15"
+                        android:layout_width="150dp"
+                        android:layout_height="150dp"
+                        android:layout_weight="1"
+                        android:onClick="onButtonClick"
+                        android:text="おきがえ" />
+
+                    <Button
+                        android:id="@+id/button16"
+                        android:layout_width="150dp"
+                        android:layout_height="150dp"
+                        android:layout_weight="1"
+                        android:onClick="onButtonClick"
+                        android:text="おきがえ" />
+
+                    <Button
+                        android:id="@+id/button17"
+                        android:layout_width="150dp"
+                        android:layout_height="150dp"
+                        android:layout_weight="1"
+                        android:onClick="onButtonClick"
+                        android:text="おわった！" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/maru24"
+                        android:layout_width="150dp"
+                        android:layout_height="150dp"
+                        android:layout_weight="1"
+                        android:visibility="invisible"
+                        app:srcCompat="@drawable/maru"
+                        tools:visibility="visible" />
+
+                    <ImageView
+                        android:id="@+id/maru25"
+                        android:layout_width="150dp"
+                        android:layout_height="150dp"
+                        android:layout_weight="1"
+                        android:visibility="invisible"
+                        app:srcCompat="@drawable/maru"
+                        tools:visibility="visible" />
+
+                    <Space
+                        android:layout_width="150dp"
+                        android:layout_height="150dp"
+                        android:layout_weight="1" />
+                </LinearLayout>
+
+            </FrameLayout>
 
         </LinearLayout>
 
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
+        <ImageView
+            android:id="@+id/hanamaru21"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="invisible"
+            app:srcCompat="@drawable/hanamaru01"
+            tools:visibility="visible" />
 
-            <Button
-                android:id="@+id/button15"
-                android:layout_width="150dp"
-                android:layout_height="150dp"
-                android:layout_weight="1"
-                android:text="Button" />
+    </FrameLayout>
 
-            <Button
-                android:id="@+id/button16"
-                android:layout_width="150dp"
-                android:layout_height="150dp"
-                android:layout_weight="1"
-                android:text="Button" />
-
-            <Button
-                android:id="@+id/button17"
-                android:layout_width="150dp"
-                android:layout_height="150dp"
-                android:layout_weight="1"
-                android:text="Button" />
-        </LinearLayout>
-    </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
