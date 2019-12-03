@@ -416,7 +416,7 @@ public class SecondActivity extends AppCompatActivity {
                     default:
                 }
                 break;
-            case R.id.setting:
+            case R.id.setting2:
                 Intent intent = new Intent(this, Setting.class);
                 startActivity(intent);
         }
