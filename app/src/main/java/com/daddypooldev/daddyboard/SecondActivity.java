@@ -202,41 +202,41 @@ public class SecondActivity extends AppCompatActivity {
         } else {
             //editTextfuda5.setText("");
         }
-        fileName = "iro1";
-        String iro1 = readFile(fileName);
-        if (iro1 != null) {
-            Button button = findViewById(R.id.button12);
-            button.setBackgroundColor(Integer.parseInt(iro1));
-        } else {
-        }
-        fileName = "iro2";
-        String iro2 = readFile(fileName);
-        if (iro2 != null) {
-            Button button2 = findViewById(R.id.button13);
-            button2.setBackgroundColor(Integer.parseInt(iro2));
-        } else {
-        }
-        fileName = "iro3";
-        String iro3 = readFile(fileName);
-        if (iro3 != null) {
-            Button button3 = findViewById(R.id.button14);
-            button3.setBackgroundColor(Integer.parseInt(iro3));
-        } else {
-        }
-        fileName = "iro4";
-        String iro4 = readFile(fileName);
-        if (iro4 != null) {
-            Button button4 = findViewById(R.id.button15);
-            button4.setBackgroundColor(Integer.parseInt(iro4));
-        } else {
-        }
-        fileName = "iro5";
-        String iro5 = readFile(fileName);
-        if (iro5 != null) {
-            Button button5 = findViewById(R.id.button16);
-            button5.setBackgroundColor(Integer.parseInt(iro5));
-        } else {
-        }
+//        fileName = "iro1";
+//        String iro1 = readFile(fileName);
+//        if (iro1 != null) {
+//            Button button = findViewById(R.id.button12);
+//            button.setBackgroundColor(Integer.parseInt(iro1));
+//        } else {
+//        }
+//        fileName = "iro2";
+//        String iro2 = readFile(fileName);
+//        if (iro2 != null) {
+//            Button button2 = findViewById(R.id.button13);
+//            button2.setBackgroundColor(Integer.parseInt(iro2));
+//        } else {
+//        }
+//        fileName = "iro3";
+//        String iro3 = readFile(fileName);
+//        if (iro3 != null) {
+//            Button button3 = findViewById(R.id.button14);
+//            button3.setBackgroundColor(Integer.parseInt(iro3));
+//        } else {
+//        }
+//        fileName = "iro4";
+//        String iro4 = readFile(fileName);
+//        if (iro4 != null) {
+//            Button button4 = findViewById(R.id.button15);
+//            button4.setBackgroundColor(Integer.parseInt(iro4));
+//        } else {
+//        }
+//        fileName = "iro5";
+//        String iro5 = readFile(fileName);
+//        if (iro5 != null) {
+//            Button button5 = findViewById(R.id.button16);
+//            button5.setBackgroundColor(Integer.parseInt(iro5));
+//        } else {
+//        }
 
         //札の枚数の処理
         fileName = "maisu";
