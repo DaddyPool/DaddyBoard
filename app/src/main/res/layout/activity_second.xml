@@ -9,6 +9,7 @@
     android:orientation="vertical" >
 
     <LinearLayout
+        android:id="@+id/menu_area_linear"
         android:layout_width="150dp"
         android:layout_height="match_parent"
         android:orientation="vertical"
@@ -17,26 +18,29 @@
 
         <Button
             android:id="@+id/setting2"
-            android:layout_width="match_parent"
-            android:layout_height="80dp"
-            android:onClick="onButtonClick"
-            android:text="設定" />
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@drawable/setting"
+            android:layout_gravity="right|top"
+            android:onClick="onButtonClick" />
 
-        <Button
-            android:id="@+id/button19"
-            android:layout_width="match_parent"
-            android:layout_height="80dp"
-            android:onClick="onButtonClick"
-            android:text="Button" />
+<!--        <Button-->
+<!--            android:id="@+id/button19"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="80dp"-->
+<!--            android:onClick="onButtonClick"-->
+<!--            android:text="Button" />-->
+
 
         <Button
             android:id="@+id/resetbutton2"
-            android:layout_width="match_parent"
-            android:layout_height="80dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right|bottom"
             android:onClick="onButtonClick"
+            android:text="リセット"
             android:visibility="invisible"
-            tools:visibility="visible"
-            android:text="リセット" />
+            tools:visibility="visible" />
     </LinearLayout>
 
     <FrameLayout
@@ -126,29 +130,50 @@
                     android:layout_height="match_parent"
                     android:orientation="horizontal">
 
+                    <Space
+                        android:layout_width="25dp"
+                        android:layout_height="150dp"
+                        android:layout_weight="1" />
+
                     <TextView
                         android:id="@+id/textbutton1"
-                        android:layout_width="150dp"
+                        android:layout_width="100dp"
                         android:layout_height="150dp"
                         android:layout_weight="1"
-                        android:text="おきがえ"
-                        android:gravity="center_horizontal|center_vertical" />
+                        android:gravity="center_horizontal|center_vertical"
+                        android:text="おきがえ" />
+
+                    <Space
+                        android:layout_width="50dp"
+                        android:layout_height="150dp"
+                        android:layout_weight="1" />
 
                     <TextView
                         android:id="@+id/textbutton2"
-                        android:layout_width="150dp"
+                        android:layout_width="100dp"
                         android:layout_height="150dp"
                         android:layout_weight="1"
                         android:text="おきがえ"
                         android:gravity="center_horizontal|center_vertical" />
 
+                    <Space
+                        android:layout_width="50dp"
+                        android:layout_height="150dp"
+                        android:layout_weight="1" />
+
                     <TextView
                         android:id="@+id/textbutton3"
-                        android:layout_width="150dp"
+                        android:layout_width="100dp"
                         android:layout_height="150dp"
                         android:layout_weight="1"
                         android:text="おきがえ"
                         android:gravity="center_horizontal|center_vertical" />
+
+                    <Space
+                        android:layout_width="25dp"
+                        android:layout_height="150dp"
+                        android:layout_weight="1" />
+
                 </LinearLayout>
 
                 <LinearLayout
@@ -248,24 +273,33 @@
                     android:layout_height="match_parent"
                     android:orientation="horizontal">
 
-                    <TextView
-                        android:id="@+id/textbutton4"
-                        android:layout_width="150dp"
+                    <Space
+                        android:layout_width="25dp"
                         android:layout_height="150dp"
-                        android:layout_weight="1"
-                        android:text="おきがえ"
-                        android:gravity="center_horizontal|center_vertical"/>
+                        android:layout_weight="1" />
 
                     <TextView
-                        android:id="@+id/textbutton5"
-                        android:layout_width="150dp"
+                        android:id="@+id/textbutton4"
+                        android:layout_width="100dp"
                         android:layout_height="150dp"
                         android:layout_weight="1"
                         android:text="おきがえ"
                         android:gravity="center_horizontal|center_vertical"/>
 
                     <Space
-                        android:layout_width="150dp"
+                        android:layout_width="50dp"
+                        android:layout_height="150dp"
+                        android:layout_weight="1" />
+
+                    <TextView
+                        android:id="@+id/textbutton5"
+                        android:layout_width="100dp"
+                        android:layout_height="150dp"
+                        android:layout_weight="1"
+                        android:text="おきがえ"
+                        android:gravity="center_horizontal|center_vertical"/>
+                    <Space
+                        android:layout_width="175dp"
                         android:layout_height="150dp"
                         android:layout_weight="1" />
                 </LinearLayout>
