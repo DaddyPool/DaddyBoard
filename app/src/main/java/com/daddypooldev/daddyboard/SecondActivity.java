@@ -10,6 +10,7 @@ import android.os.Bundle;
 //import android.support.annotation.NonNull;
 //import android.support.design.widget.BottomNavigationView;
 //import android.support.v7.app.AppCompatActivity;
+import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
@@ -126,7 +127,7 @@ public class SecondActivity extends AppCompatActivity {
         String str1 = readFile(fileName);
 //        kaigyou = str1;
         if (str1 != null) {
-            TextView button = findViewById(R.id.button12);
+            TextView button = findViewById(R.id.textbutton1);
             button.setText(str1);
             if(str1.length() <= 3) {
                 button.setTextSize(36);
@@ -142,7 +143,7 @@ public class SecondActivity extends AppCompatActivity {
         fileName = "fuda2";
         String str2 = readFile(fileName);
         if (str2 != null) {
-            TextView button2 = findViewById(R.id.button13);
+            TextView button2 = findViewById(R.id.textbutton2);
             button2.setText(str2);
             if(str1.length() <= 3) {
                 button2.setTextSize(36);
@@ -158,7 +159,7 @@ public class SecondActivity extends AppCompatActivity {
         fileName = "fuda3";
         String str3 = readFile(fileName);
         if (str3 != null) {
-            TextView button3 = findViewById(R.id.button14);
+            TextView button3 = findViewById(R.id.textbutton3);
             button3.setText(str3);
             if(str1.length() <= 3) {
                 button3.setTextSize(36);
@@ -174,7 +175,7 @@ public class SecondActivity extends AppCompatActivity {
         fileName = "fuda4";
         String str4 = readFile(fileName);
         if (str4 != null) {
-            TextView button4 = findViewById(R.id.button15);
+            TextView button4 = findViewById(R.id.textbutton4);
             button4.setText(str4);
             if(str1.length() <= 3) {
                 button4.setTextSize(36);
@@ -190,7 +191,7 @@ public class SecondActivity extends AppCompatActivity {
         fileName = "fuda5";
         String str5 = readFile(fileName);
         if (str5 != null) {
-            TextView button5 = findViewById(R.id.button16);
+            TextView button5 = findViewById(R.id.textbutton5);
             button5.setText(str5);
             if(str1.length() <= 3) {
                 button5.setTextSize(36);
@@ -202,41 +203,41 @@ public class SecondActivity extends AppCompatActivity {
         } else {
             //editTextfuda5.setText("");
         }
-//        fileName = "iro1";
-//        String iro1 = readFile(fileName);
-//        if (iro1 != null) {
-//            Button button = findViewById(R.id.button12);
-//            button.setBackgroundColor(Integer.parseInt(iro1));
-//        } else {
-//        }
-//        fileName = "iro2";
-//        String iro2 = readFile(fileName);
-//        if (iro2 != null) {
-//            Button button2 = findViewById(R.id.button13);
-//            button2.setBackgroundColor(Integer.parseInt(iro2));
-//        } else {
-//        }
-//        fileName = "iro3";
-//        String iro3 = readFile(fileName);
-//        if (iro3 != null) {
-//            Button button3 = findViewById(R.id.button14);
-//            button3.setBackgroundColor(Integer.parseInt(iro3));
-//        } else {
-//        }
-//        fileName = "iro4";
-//        String iro4 = readFile(fileName);
-//        if (iro4 != null) {
-//            Button button4 = findViewById(R.id.button15);
-//            button4.setBackgroundColor(Integer.parseInt(iro4));
-//        } else {
-//        }
-//        fileName = "iro5";
-//        String iro5 = readFile(fileName);
-//        if (iro5 != null) {
-//            Button button5 = findViewById(R.id.button16);
-//            button5.setBackgroundColor(Integer.parseInt(iro5));
-//        } else {
-//        }
+        fileName = "iro1";
+        String iro1 = readFile(fileName);
+        if (iro1 != null) {
+            TextView button = findViewById(R.id.textbutton1);
+            button.setTextColor(Integer.parseInt(iro1));
+        } else {
+        }
+        fileName = "iro2";
+        String iro2 = readFile(fileName);
+        if (iro2 != null) {
+            TextView button2 = findViewById(R.id.textbutton2);
+            button2.setTextColor(Integer.parseInt(iro2));
+        } else {
+        }
+        fileName = "iro3";
+        String iro3 = readFile(fileName);
+        if (iro3 != null) {
+            TextView button3 = findViewById(R.id.textbutton3);
+            button3.setTextColor(Integer.parseInt(iro3));
+        } else {
+        }
+        fileName = "iro4";
+        String iro4 = readFile(fileName);
+        if (iro4 != null) {
+            TextView button4 = findViewById(R.id.textbutton4);
+            button4.setTextColor(Integer.parseInt(iro4));
+        } else {
+        }
+        fileName = "iro5";
+        String iro5 = readFile(fileName);
+        if (iro5 != null) {
+            TextView button5 = findViewById(R.id.textbutton5);
+            button5.setTextColor(Integer.parseInt(iro5));
+        } else {
+        }
 
         //札の枚数の処理
         fileName = "maisu";
@@ -245,10 +246,20 @@ public class SecondActivity extends AppCompatActivity {
             switch (maisuu) {
                 case "0":
                     findViewById(R.id.button12).setVisibility(View.VISIBLE);
-                    findViewById(R.id.button13).setVisibility(View.GONE);
-                    findViewById(R.id.button14).setVisibility(View.GONE);
-                    findViewById(R.id.button15).setVisibility(View.GONE);
-                    findViewById(R.id.button16).setVisibility(View.GONE);
+                    findViewById(R.id.button13).setVisibility(View.INVISIBLE);
+                    findViewById(R.id.button14).setVisibility(View.INVISIBLE);
+                    findViewById(R.id.button15).setVisibility(View.INVISIBLE);
+                    findViewById(R.id.button16).setVisibility(View.INVISIBLE);
+
+                    findViewById(R.id.textbutton2).setVisibility(View.INVISIBLE);
+                    findViewById(R.id.textbutton3).setVisibility(View.INVISIBLE);
+                    findViewById(R.id.textbutton4).setVisibility(View.INVISIBLE);
+                    findViewById(R.id.textbutton5).setVisibility(View.INVISIBLE);
+
+                    findViewById(R.id.imageniku1).setVisibility(View.VISIBLE);
+                    findViewById(R.id.imageniku2).setVisibility(View.VISIBLE);
+                    findViewById(R.id.imageniku3).setVisibility(View.VISIBLE);
+                    findViewById(R.id.imageniku4).setVisibility(View.VISIBLE);
 
                     onbutton1 = false;
                     onbutton2 = true;
@@ -260,9 +271,19 @@ public class SecondActivity extends AppCompatActivity {
                 case "1":
                     findViewById(R.id.button12).setVisibility(View.VISIBLE);
                     findViewById(R.id.button13).setVisibility(View.VISIBLE);
-                    findViewById(R.id.button14).setVisibility(View.GONE);
-                    findViewById(R.id.button15).setVisibility(View.GONE);
-                    findViewById(R.id.button16).setVisibility(View.GONE);
+                    findViewById(R.id.button14).setVisibility(View.INVISIBLE);
+                    findViewById(R.id.button15).setVisibility(View.INVISIBLE);
+                    findViewById(R.id.button16).setVisibility(View.INVISIBLE);
+
+                    findViewById(R.id.textbutton2).setVisibility(View.VISIBLE);
+                    findViewById(R.id.textbutton3).setVisibility(View.INVISIBLE);
+                    findViewById(R.id.textbutton4).setVisibility(View.INVISIBLE);
+                    findViewById(R.id.textbutton5).setVisibility(View.INVISIBLE);
+
+                    findViewById(R.id.imageniku1).setVisibility(View.INVISIBLE);
+                    findViewById(R.id.imageniku2).setVisibility(View.VISIBLE);
+                    findViewById(R.id.imageniku3).setVisibility(View.VISIBLE);
+                    findViewById(R.id.imageniku4).setVisibility(View.VISIBLE);
 
                     onbutton1 = false;
                     onbutton2 = false;
@@ -275,8 +296,18 @@ public class SecondActivity extends AppCompatActivity {
                     findViewById(R.id.button12).setVisibility(View.VISIBLE);
                     findViewById(R.id.button13).setVisibility(View.VISIBLE);
                     findViewById(R.id.button14).setVisibility(View.VISIBLE);
-                    findViewById(R.id.button15).setVisibility(View.GONE);
-                    findViewById(R.id.button16).setVisibility(View.GONE);
+                    findViewById(R.id.button15).setVisibility(View.INVISIBLE);
+                    findViewById(R.id.button16).setVisibility(View.INVISIBLE);
+
+                    findViewById(R.id.textbutton2).setVisibility(View.VISIBLE);
+                    findViewById(R.id.textbutton3).setVisibility(View.VISIBLE);
+                    findViewById(R.id.textbutton4).setVisibility(View.INVISIBLE);
+                    findViewById(R.id.textbutton5).setVisibility(View.INVISIBLE);
+
+                    findViewById(R.id.imageniku1).setVisibility(View.INVISIBLE);
+                    findViewById(R.id.imageniku2).setVisibility(View.INVISIBLE);
+                    findViewById(R.id.imageniku3).setVisibility(View.VISIBLE);
+                    findViewById(R.id.imageniku4).setVisibility(View.VISIBLE);
 
                     onbutton1 = false;
                     onbutton2 = false;
@@ -290,7 +321,17 @@ public class SecondActivity extends AppCompatActivity {
                     findViewById(R.id.button13).setVisibility(View.VISIBLE);
                     findViewById(R.id.button14).setVisibility(View.VISIBLE);
                     findViewById(R.id.button15).setVisibility(View.VISIBLE);
-                    findViewById(R.id.button16).setVisibility(View.GONE);
+                    findViewById(R.id.button16).setVisibility(View.INVISIBLE);
+
+                    findViewById(R.id.textbutton2).setVisibility(View.VISIBLE);
+                    findViewById(R.id.textbutton3).setVisibility(View.VISIBLE);
+                    findViewById(R.id.textbutton4).setVisibility(View.VISIBLE);
+                    findViewById(R.id.textbutton5).setVisibility(View.INVISIBLE);
+
+                    findViewById(R.id.imageniku1).setVisibility(View.INVISIBLE);
+                    findViewById(R.id.imageniku2).setVisibility(View.INVISIBLE);
+                    findViewById(R.id.imageniku3).setVisibility(View.INVISIBLE);
+                    findViewById(R.id.imageniku4).setVisibility(View.VISIBLE);
 
                     onbutton1 = false;
                     onbutton2 = false;
@@ -305,6 +346,16 @@ public class SecondActivity extends AppCompatActivity {
                     findViewById(R.id.button14).setVisibility(View.VISIBLE);
                     findViewById(R.id.button15).setVisibility(View.VISIBLE);
                     findViewById(R.id.button16).setVisibility(View.VISIBLE);
+
+                    findViewById(R.id.textbutton2).setVisibility(View.VISIBLE);
+                    findViewById(R.id.textbutton3).setVisibility(View.VISIBLE);
+                    findViewById(R.id.textbutton4).setVisibility(View.VISIBLE);
+                    findViewById(R.id.textbutton5).setVisibility(View.VISIBLE);
+
+                    findViewById(R.id.imageniku1).setVisibility(View.INVISIBLE);
+                    findViewById(R.id.imageniku2).setVisibility(View.INVISIBLE);
+                    findViewById(R.id.imageniku3).setVisibility(View.INVISIBLE);
+                    findViewById(R.id.imageniku4).setVisibility(View.INVISIBLE);
 
                     onbutton1 = false;
                     onbutton2 = false;
