@@ -42,6 +42,7 @@ public class SecondActivity extends AppCompatActivity {
     boolean onbutton4=false;
     boolean onbutton5=false;
     int maisuuC;
+    int count=5;
 
     //音楽用のフィールドとSoundPoolのフィールド
     int mp3a;
@@ -116,6 +117,7 @@ public class SecondActivity extends AppCompatActivity {
         mp3a = soundPool.load(this, R.raw.boyoyon1, 1);
         mp3b = soundPool.load(this, R.raw.kotsudumi1, 1);
         mp3c = soundPool.load(this, R.raw.trumpet1, 1);
+
     }
 
     @Override
@@ -267,6 +269,7 @@ public class SecondActivity extends AppCompatActivity {
                     onbutton4 = true;
                     onbutton5 = true;
                     maisuuC=1;
+                    count=maisuuC;
                     break;
                 case "1":
                     findViewById(R.id.button12).setVisibility(View.VISIBLE);
@@ -291,6 +294,7 @@ public class SecondActivity extends AppCompatActivity {
                     onbutton4 = true;
                     onbutton5 = true;
                     maisuuC=2;
+                    count=maisuuC;
                     break;
                 case "2":
                     findViewById(R.id.button12).setVisibility(View.VISIBLE);
@@ -315,6 +319,7 @@ public class SecondActivity extends AppCompatActivity {
                     onbutton4 = true;
                     onbutton5 = true;
                     maisuuC=3;
+                    count=maisuuC;
                     break;
                 case "3":
                     findViewById(R.id.button12).setVisibility(View.VISIBLE);
@@ -339,6 +344,7 @@ public class SecondActivity extends AppCompatActivity {
                     onbutton4 = false;
                     onbutton5 = true;
                     maisuuC=4;
+                    count=maisuuC;
                     break;
                 case "4":
                     findViewById(R.id.button12).setVisibility(View.VISIBLE);
@@ -363,12 +369,19 @@ public class SecondActivity extends AppCompatActivity {
                     onbutton4 = false;
                     onbutton5 = false;
                     maisuuC=5;
+                    count=maisuuC;
                     break;
                 default:
             }
+
         }else{
 
         }
+
+        //枚数カウントの表示
+        TextView fukidasi = findViewById(R.id.textView11);
+        fukidasi.setText(String.valueOf(count));
+
     }
     // クリック時に呼ばれるメソッド
     public void onButtonClick(View view){
@@ -378,9 +391,15 @@ public class SecondActivity extends AppCompatActivity {
                     findViewById(R.id.maru21).setVisibility(View.VISIBLE);
                     onbutton1 = true;
                     play_mp3a();//音楽再生用のメソッドを呼び出す
+                    count=count-1;
+                    TextView fukidasi = findViewById(R.id.textView11);
+                    fukidasi.setText(String.valueOf(count));
                 }else{
                     findViewById(R.id.maru21).setVisibility(View.INVISIBLE);
                     onbutton1 = false;
+                    count=count+1;
+                    TextView fukidasi = findViewById(R.id.textView11);
+                    fukidasi.setText(String.valueOf(count));
                 }
                 break;
             case R.id.button13:
@@ -388,9 +407,15 @@ public class SecondActivity extends AppCompatActivity {
                     findViewById(R.id.maru22).setVisibility(View.VISIBLE);
                     onbutton2 = true;
                     play_mp3b();//音楽再生用のメソッドを呼び出す
+                    count=count-1;
+                    TextView fukidasi = findViewById(R.id.textView11);
+                    fukidasi.setText(String.valueOf(count));
                 }else{
                     findViewById(R.id.maru22).setVisibility(View.INVISIBLE);
                     onbutton2 = false;
+                    count=count+1;
+                    TextView fukidasi = findViewById(R.id.textView11);
+                    fukidasi.setText(String.valueOf(count));
                 }
                 break;
             case R.id.button14:
@@ -398,9 +423,15 @@ public class SecondActivity extends AppCompatActivity {
                     findViewById(R.id.maru23).setVisibility(View.VISIBLE);
                     onbutton3 = true;
                     play_mp3c();//音楽再生用のメソッドを呼び出す
+                    count=count-1;
+                    TextView fukidasi = findViewById(R.id.textView11);
+                    fukidasi.setText(String.valueOf(count));
                 }else{
                     findViewById(R.id.maru23).setVisibility(View.INVISIBLE);
                     onbutton3 = false;
+                    count=count+1;
+                    TextView fukidasi = findViewById(R.id.textView11);
+                    fukidasi.setText(String.valueOf(count));
                 }
                 break;
             case R.id.button15:
@@ -408,9 +439,15 @@ public class SecondActivity extends AppCompatActivity {
                     findViewById(R.id.maru24).setVisibility(View.VISIBLE);
                     onbutton4 = true;
                     play_mp3a();//音楽再生用のメソッドを呼び出す
+                    count=count-1;
+                    TextView fukidasi = findViewById(R.id.textView11);
+                    fukidasi.setText(String.valueOf(count));
                 }else{
                     findViewById(R.id.maru24).setVisibility(View.INVISIBLE);
                     onbutton4 = false;
+                    count=count+1;
+                    TextView fukidasi = findViewById(R.id.textView11);
+                    fukidasi.setText(String.valueOf(count));
                 }
                 break;
             case R.id.button16:
@@ -418,9 +455,15 @@ public class SecondActivity extends AppCompatActivity {
                     findViewById(R.id.maru25).setVisibility(View.VISIBLE);
                     onbutton5 = true;
                     play_mp3a();//音楽再生用のメソッドを呼び出す
+                    count=count-1;
+                    TextView fukidasi = findViewById(R.id.textView11);
+                    fukidasi.setText(String.valueOf(count));
                 }else{
                     findViewById(R.id.maru25).setVisibility(View.INVISIBLE);
                     onbutton5 = false;
+                    count=count+1;
+                    TextView fukidasi = findViewById(R.id.textView11);
+                    fukidasi.setText(String.valueOf(count));
                 }
                 break;
             case R.id.button17:
@@ -438,6 +481,9 @@ public class SecondActivity extends AppCompatActivity {
                 findViewById(R.id.maru25).setVisibility(View.INVISIBLE);
                 findViewById(R.id.hanamaru21).setVisibility(View.INVISIBLE);
                 findViewById(R.id.resetbutton2).setVisibility(View.INVISIBLE);
+                count=maisuuC;
+                TextView fukidasi = findViewById(R.id.textView11);
+                fukidasi.setText(String.valueOf(count));
                 switch (maisuuC) {
                     case 1:
                         onbutton1 = false;
